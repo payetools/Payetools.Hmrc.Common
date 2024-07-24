@@ -144,7 +144,7 @@ class Build : NukeBuild
         .Executes(async () =>
         {
             var message =
-                $"Payetools.Common.Hmrc version deployed to Nuget (MinVer.FileVersion = {MinVer.FileVersion})";
+                $"Payetools.Hmrc.Common version deployed to Nuget (MinVer.FileVersion = {MinVer.FileVersion})";
     
             await SendSlackMessageAsync(_ => _
                     .SetText(message),
