@@ -122,6 +122,7 @@ class Build : NukeBuild
         .Requires(() => NugetApiKey)
         .Requires(() => NugetApiUrl)
         .DependsOn(Pack)
+        .OnlyWhenDynamic(() => GitRepository.Tags.Count > 0 || IsLocalBuild)
         .Executes(() =>
         {
             var packageFiles = ArtifactsDirectory
