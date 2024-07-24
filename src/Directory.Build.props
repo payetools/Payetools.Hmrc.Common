@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project>
+	
+	<PropertyGroup>
+		<Authors>Payetools Foundation</Authors>
+		<Copyright>Copyright (c) 2023-2024, Payetools Foundation</Copyright>
+		<Company>Payetools Foundation</Company>
+		<PackageProjectUrl>https://payetools.dev/</PackageProjectUrl>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<PackageLicenseFile>LICENSE.md</PackageLicenseFile>
+		<RepositoryUrl>https://github.com/payetools/Payetools.Hmrc.Common</RepositoryUrl>
+	</PropertyGroup>
+	
+	<ItemGroup>
+		<PackageReference Include="MinVer" Version="5.0.0" PrivateAssets="All"/>
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Include="$(SolutionDir)src/shared/LICENSE.md" Pack="true" PackagePath="" />
+		<None Include="$(SolutionDir)README.md" Pack="true" PackagePath="" />
+	</ItemGroup>
+
+</Project>
