@@ -7,13 +7,13 @@
 using Payetools.Common.Model;
 using Payetools.NationalInsurance.Model;
 using Payetools.Payroll.Model;
+using System.Text.Json.Serialization;
 
 namespace Payetools.Hmrc.Common.Rti.Data;
 
 /// <summary>
 /// Interface that provides access to the employee's details.
 /// </summary>
-// [JsonDerivedType(typeof(EmployeeDetails))]
 public interface IEmployeeDetails
 {
     /// <summary>
@@ -414,6 +414,7 @@ public interface IFpsEmploymentNationalInsuranceData
 /// Interface that provides access to the data set needed to construct an employee pay run
 /// entry within a Full Payment Submission.
 /// </summary>
+[JsonDerivedType(typeof(EmploymentData))]
 public interface IEmploymentData
 {
     /// <summary>
