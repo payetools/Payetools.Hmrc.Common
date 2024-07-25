@@ -214,20 +214,6 @@ public class FpsEmploymentPaymentData
     public LateSubmissionReason? LateReason { get; init; }
 
     /// <summary>
-    /// Gets the week number for the payment. Applicable for week-based payments; should be null for
-    /// monthly-based payments.
-    /// </summary>
-    /// <remarks>One or <see cref="WeekNumber"/> or <see cref="MonthNumber"/> must be provided.</remarks>
-    public int? WeekNumber { get; init; }
-
-    /// <summary>
-    /// Gets the month number for the payment. Applicable for month-based payments; should be null for
-    /// weekly-based payments.
-    /// </summary>
-    /// <remarks>One or <see cref="WeekNumber"/> or <see cref="MonthNumber"/> must be provided.</remarks>
-    public int? MonthNumber { get; init; }
-
-    /// <summary>
     /// Gets the number of periods covered by this payment.  Most usually 1, but can be greater for
     /// payments that cover more than one payment period.
     /// </summary>
