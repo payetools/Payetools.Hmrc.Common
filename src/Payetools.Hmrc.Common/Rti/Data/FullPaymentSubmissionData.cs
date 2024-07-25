@@ -409,17 +409,18 @@ public class NewStarterInfo
 public class EmploymentData
 {
     /// <summary>
-    /// Gets a value indicating whether the employment is treated as 'off payroll'.
+    /// Gets a value indicating whether the employment is treated as 'off payroll'. Defaults to
+    /// false if not supplied.
     /// </summary>
-    public bool IsOffPayrollWorker { get; init; }
+    public bool? IsOffPayrollWorker { get; init; }
 
     /// <summary>
     /// Gets a value indicating whether payments to an individual are from pension or income provided
     /// from registered pension schemes (including annuities, income from drawdown arrangements,
     /// trivial commutation payments, flexibly accessed pensions or an uncrystallised funds pension
-    /// lump sum).
+    /// lump sum). Defaults to false if not supplied.
     /// </summary>
-    public bool IsOccupationalPensionPayment { get; init; }
+    public bool? IsOccupationalPensionPayment { get; init; }
 
     /// <summary>
     /// Gets the director's NI calculation method used. Null if the employee is not a director.
@@ -443,14 +444,16 @@ public class EmploymentData
     public string PayrollId { get; init; } = default!;
 
     /// <summary>
-    /// Gets a value indicating whether this payment is not being made to an individual.
+    /// Gets a value indicating whether this payment is not being made to an individual. Defaults to
+    /// false if not supplied.
     /// </summary>
-    public bool IsPaymentToNonIndividual { get; init; }
+    public bool? IsPaymentToNonIndividual { get; init; }
 
     /// <summary>
-    /// Gets a value indicating whether the employee is paid irregularly.
+    /// Gets a value indicating whether the employee is paid irregularly. Defaults to
+    /// false if not supplied.
     /// </summary>
-    public bool IsPaidIrregularly { get; init; }
+    public bool? IsPaidIrregularly { get; init; }
 
     /// <summary>
     /// Gets the employee's leaving date, if appropriate.  Null if the employee's employment is
