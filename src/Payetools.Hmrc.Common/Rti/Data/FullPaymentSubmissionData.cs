@@ -15,7 +15,7 @@ namespace Payetools.Hmrc.Common.Rti.Data;
 /// and <see cref="ForeignCountry"/> set to null or omitted; if the address is non-UK, then Postcode should
 /// be null and ForeignCountry should be provided.
 /// </summary>
-public class PostalAddress
+public class Address
 {
     /// <summary>Gets the first line of the address.</summary>
     public string AddressLine1 { get; init; } = default!;
@@ -70,7 +70,7 @@ public class EmployeeDetails
     /// <summary>
     /// Gets the employee's postal address.
     /// </summary>
-    public PostalAddress Address { get; init; } = default!;
+    public Address Address { get; init; } = default!;
 
     /// <summary>
     /// Gets the employee's date of birth.
