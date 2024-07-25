@@ -235,14 +235,15 @@ public class FpsEmploymentPaymentData
 
     /// <summary>
     /// Gets a value indicating whether earnings from more than one job have been aggregated together to
-    /// calculate NI contributions.
+    /// calculate NI contributions. Defaults to false if not supplied.
     /// </summary>
-    public bool AggregatedEarningsForNi { get; init; }
+    public bool? AggregatedEarningsForNi { get; init; }
 
     /// <summary>
-    /// Gets a value indicating whether this payment was made after an employee left employment.
+    /// Gets a value indicating whether this payment was made after an employee left employment. Defaults to
+    /// false if not supplied.
     /// </summary>
-    public bool IsPaymentAfterLeaving { get; init; }
+    public bool? IsPaymentAfterLeaving { get; init; }
 
     /// <summary>
     /// Gets the normal number of hours worked by the employee, in HMRC prescribed bands.
@@ -335,9 +336,9 @@ public class FpsEmploymentPaymentData
 
     /// <summary>
     /// Gets a value indicating whether the employee's pay has been reduced due to
-    /// being on strike within the payment period.
+    /// being on strike within the payment period. Defaults to false if not supplied.
     /// </summary>
-    public bool OnStrike { get; init; }
+    public bool? OnStrike { get; init; }
 
     // Note: UnpaidAbsence is omitted as the HMRC guidance states "Do not complete this
     // field at present".
