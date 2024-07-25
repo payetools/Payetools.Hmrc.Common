@@ -18,7 +18,7 @@ public interface IEmployeeDetails
     /// <summary>
     /// Gets the employee's National Insurance number.
     /// </summary>
-    NiNumber NiNumber { get; }
+    string NiNumber { get; }
 
     /// <summary>
     /// Gets the employee's name details.
@@ -28,7 +28,7 @@ public interface IEmployeeDetails
     /// <summary>
     /// Gets the employee's postal address.
     /// </summary>
-    PostalAddress Address { get; }
+    Address Address { get; }
 
     /// <summary>
     /// Gets the employee's date of birth.

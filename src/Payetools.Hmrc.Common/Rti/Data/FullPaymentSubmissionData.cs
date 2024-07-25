@@ -29,7 +29,7 @@ public class EmployeePartner
 /// <summary>
 /// Entity that provides access to the employee's details.
 /// </summary>
-public class EmployeeDetails
+public class EmployeeDetails : IEmployeeDetails
 {
     /// <summary>
     /// Gets the employee's National Insurance number.
