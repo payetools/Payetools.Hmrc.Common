@@ -53,7 +53,14 @@ public class SerializationOptionsProvider
                 (typeInfo) =>
                     {
                         if (typeInfo.Type != types.Item1) return;
-                        typeInfo.CreateObject = () => Activator.CreateInstance(types.Item2, nonPublic: true)!;
+                        typeInfo.CreateObject = () =>
+                        {
+                            var obj = Activator.CreateInstance(types.Item2, nonPublic: true);
+
+                            Console.WriteLine(obj != null ? $"Successfully created object of type {types.Item2.Name}" : $"CreateInstance for object of type {types.Item2.Name} returned null");
+
+                            return obj!;
+                        };
                     }));
 
         var typeInfoResolver = new DefaultJsonTypeInfoResolver();
@@ -66,7 +73,7 @@ public class SerializationOptionsProvider
 
         return options;
 #else
-    throw new NotSupportedException("Interface to concrete type resolution is not supported by System.Text.Json in .Net 6.0 and below");
+        throw new NotSupportedException("Interface to concrete type resolution is not supported by System.Text.Json in .Net 6.0 and below");
 #endif
     }
 }
