@@ -22,14 +22,18 @@ public class SerializationOptionsProvider
     /// </summary>
     /// <param name="interfaceType">Interface type.</param>
     /// <param name="implementationType">Concrete implementation type.</param>
+    /// <returns>The current <see cref="SerializationOptionsProvider"/> instance, so
+    /// <see cref="AddTypeMapping(Type, Type)"/> calls can be chained (i.e., using fluent syntax).</returns>
     /// <exception cref="InvalidOperationException">Thrown if the concrete type does not
     /// implement the specified interface.</exception>
-    public void AddTypeMapping(Type interfaceType, Type implementationType)
+    public SerializationOptionsProvider AddTypeMapping(Type interfaceType, Type implementationType)
     {
         if (!interfaceType.IsAssignableFrom(implementationType))
             throw new InvalidOperationException("Implementation type is not assignable to interface type");
 
         _typeMappings.Add((interfaceType, implementationType));
+
+        return this;
     }
 
     /// <summary>
