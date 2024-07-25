@@ -485,7 +485,7 @@ public interface IEmploymentData
     /// Gets the National Insurance data needed to populate the <em>Employment</em> element of
     /// the Full Payment Submission message.
     /// </summary>
-    IFpsEmploymentNationalInsuranceData[] NiDataEntries { get; }
+    List<IFpsEmploymentNationalInsuranceData> NiDataEntries { get; }
 }
 
 /// <summary>
@@ -502,5 +502,5 @@ public interface IFullPaymentSubmissionEmployeeEntry
     /// <summary>
     /// Gets the employee's employment details, including payments made in the current period.
     /// </summary>
-    IEmploymentData[] EmploymentDetails { get; }
+    List<IEmploymentData> EmploymentDetails { get; }
 }

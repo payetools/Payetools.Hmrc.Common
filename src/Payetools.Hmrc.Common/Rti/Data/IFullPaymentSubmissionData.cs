@@ -18,7 +18,7 @@ public interface IFullPaymentSubmissionData : IRtiDocumentDataSource
     /// <summary>
     /// Gets the pay run results as an IEnumerable of <see cref="IFullPaymentSubmissionEmployeeEntry"/>.
     /// </summary>
-    IFullPaymentSubmissionEmployeeEntry[] EmployeeEntries { get; }
+    List<IFullPaymentSubmissionEmployeeEntry> EmployeeEntries { get; }
 
     /// <summary>
     /// Gets data associated with a final FPS, if appropriate.
