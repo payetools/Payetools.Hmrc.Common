@@ -70,7 +70,7 @@ public class EmployeeDetails
 /// <summary>
 /// Represents the year-to-date data for an employment entry in the FPS.
 /// </summary>
-public class FpsEmploymentYtdData
+public class FpsEmploymentYtdData : IFpsEmploymentYtdData
 {
     /// <summary>
     /// Gets the taxable pay so far this tax year.
@@ -113,7 +113,7 @@ public class FpsEmploymentYtdData
 /// <summary>
 /// Represents the National Insurance record portion of an employment entry in the FPS.
 /// </summary>
-public class FpsEmploymentNiData
+public class FpsEmploymentNiData : IFpsEmploymentNationalInsuranceData
 {
     /// <summary>
     /// Gets the NI category (aka NI letter)for this entry.
@@ -170,7 +170,7 @@ public class FpsEmploymentNiData
 /// <summary>
 /// Represents the payment data record portion of an employment entry in the FPS.
 /// </summary>
-public class FpsEmploymentPaymentData
+public class FpsEmploymentPaymentData : IFpsEmploymentPaymentData
 {
     /// <summary>
     /// Gets the payment frequency for this payment.
@@ -183,9 +183,9 @@ public class FpsEmploymentPaymentData
     public DateTime PaymentDate { get; init; }
 
     /// <summary>
-    /// Gets  the reason code for any late submissions, if applicable.
+    /// Gets or sets the reason code for any late submissions, if applicable.
     /// </summary>
-    public LateSubmissionReason? LateReason { get; init; }
+    public LateSubmissionReason? LateReason { get; set; }
 
     /// <summary>
     /// Gets the number of periods covered by this payment.  Most usually 1, but can be greater for
@@ -328,8 +328,17 @@ public class FpsEmploymentPaymentData
     /// </summary>
     public decimal? SPBPPaidYtd { get; init; }
 
+    // TODO: Implement Benefits (for car benefits)
     // TODO: Implement TrivialCommutationPayments
     // TODO: Implement FlexibleDrawdown
+
+    /// <summary>
+    /// Gets the optional BACS hash code to be included this section of the FPS.
+    /// </summary>
+    /// <param name="taxYearEnding">Tax year that this FPS pertains to.</param>
+    /// <returns>Either a 64-char string of all zeroes, or for tax years from 2023-2024 onwards,
+    /// null.</returns>
+    public string? GetBacsHashCode(TaxYearEnding taxYearEnding) => null; // TODO: Check how this is used (BACScode)
 }
 
 /// <summary>
@@ -367,7 +376,7 @@ public class NewStarterInfo
 /// Entity that provides access to the employee data needed to populate the
 /// <em>Employment</em> element of the Full Payment Submission message.
 /// </summary>
-public class EmploymentData
+public class EmploymentData : IEmploymentData
 {
     /// <summary>
     /// Gets a value indicating whether the employment is treated as 'off payroll'. Defaults to
@@ -397,7 +406,7 @@ public class EmploymentData
     /// <summary>
     /// Gets new starter information for the employee, if appropriate.
     /// </summary>
-    public NewStarterInfo? NewStarterInfo { get; init; }
+    public IEmploymentNewStarterInfo? NewStarterInfo { get; init; }
 
     /// <summary>
     /// Gets the payroll ID for the employee.  Includes information about any recent change.
@@ -426,37 +435,37 @@ public class EmploymentData
     /// Gets the employee year to date data needed to populate the <em>Employment</em> element of
     /// the Full Payment Submission message.
     /// </summary>
-    public FpsEmploymentYtdData YtdFigures { get; init; } = default!;
+    public IFpsEmploymentYtdData YtdFigures { get; init; } = default!;
 
     /// <summary>
     /// Gets the employee pay run data needed to populate the <em>Employment</em> element of the
     /// Full Payment Submission message.
     /// </summary>
-    public FpsEmploymentPaymentData PaymentDetails { get; init; } = default!;
+    public IFpsEmploymentPaymentData PaymentDetails { get; init; } = default!;
 
     /// <summary>
     /// Gets the National Insurance data needed to populate the <em>Employment</em> element of
     /// the Full Payment Submission message.
     /// </summary>
-    public FpsEmploymentNiData[] NiDataEntries { get; init; } = default!;
+    public IFpsEmploymentNationalInsuranceData[] NiDataEntries { get; init; } = default!;
 }
 
 /// <summary>
 /// Entity that provides access to the data set needed to construct an employee pay run
 /// entry within a Full Payment Submission.
 /// </summary>
-public class FullPaymentSubmissionEmployeeEntry
+public class FullPaymentSubmissionEmployeeEntry : IFullPaymentSubmissionEmployeeEntry
 {
     /// <summary>
     /// Gets the employee's details.
     /// </summary>
-    public EmployeeDetails EmployeeDetails { get; init; } = default!;
+    public IEmployeeDetails EmployeeDetails { get; init; } = default!;
 
     /// <summary>
     /// Gets the employee's employment details, including payments made in
     /// the current period.
     /// </summary>
-    public EmploymentData[] EmploymentDetails { get; init; } = default!;
+    public IEmploymentData[] EmploymentDetails { get; init; } = default!;
 }
 
 /// <summary>
