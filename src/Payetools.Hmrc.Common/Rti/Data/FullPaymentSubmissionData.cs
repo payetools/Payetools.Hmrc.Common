@@ -344,7 +344,7 @@ public class FpsEmploymentPaymentData : IFpsEmploymentPaymentData
 /// <summary>
 /// Entity that provides access to an employee's new starter information, where appropriate.
 /// </summary>
-public class NewStarterInfo
+public class NewStarterInfo : IEmploymentNewStarterInfo
 {
     /// <summary>
     /// Gets the start date for the employee.

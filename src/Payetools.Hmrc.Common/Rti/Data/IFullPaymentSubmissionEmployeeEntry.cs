@@ -100,15 +100,8 @@ public interface IEmploymentNewStarterInfo
     /// </summary>
     bool? PostgraduateLoanToContinue { get; }
 
-    /// <summary>
-    /// Gets secondment information for the employee, if relevant.  Null if not applicable.
-    /// </summary>
-    ISecondmentInfo? SecondmentInfo { get; }
-
-    /// <summary>
-    /// Gets occupational pension payment information, if appropriate.
-    /// </summary>
-    IPensionPayment? OccupationalPensionPayment { get; }
+    // TODO: Implement SecondmentInfo
+    // TODO: Implement OccupationalPensionPayment
 
     // Note: The StatePension element is only used by DWP, so is not included here.
 }
