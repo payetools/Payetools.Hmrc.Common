@@ -11,32 +11,6 @@ using Payetools.Payroll.Model;
 namespace Payetools.Hmrc.Common.Rti.Data;
 
 /// <summary>
-/// Represents a postal address.  If it is a UK address, <see cref="Postcode"/> should be supplied
-/// and <see cref="ForeignCountry"/> set to null or omitted; if the address is non-UK, then Postcode should
-/// be null and ForeignCountry should be provided.
-/// </summary>
-public class Address
-{
-    /// <summary>Gets the first line of the address.</summary>
-    public string AddressLine1 { get; init; } = default!;
-
-    /// <summary>Gets the second line of the address.</summary>
-    public string AddressLine2 { get; init; } = default!;
-
-    /// <summary>Gets the third line of the address.</summary>
-    public string? AddressLine3 { get; init; }
-
-    /// <summary>Gets the fourth line of the address.</summary>
-    public string? AddressLine4 { get; init; }
-
-    /// <summary>Gets the postcode (UK addresses only).</summary>
-    public string? Postcode { get; init; }
-
-    /// <summary>Gets the foreign country (non-UK addresses only).</summary>
-    public string? ForeignCountry { get; init; }
-}
-
-/// <summary>
 /// Represents an employee's partner details, which are needed for shared parental pay.
 /// </summary>
 public class EmployeePartner
@@ -488,7 +462,7 @@ public class FullPaymentSubmissionEmployeeEntry
 /// <summary>
 /// Entity that provides access to all the data needed to construct an <em>Full Payment Submission.</em>.
 /// </summary>
-public class FullPaymentSubmissionData
+public class FullPaymentSubmissionData : IFullPaymentSubmissionData
 {
     /// <summary>
     /// Gets the relevant period end date.
@@ -523,10 +497,10 @@ public class FullPaymentSubmissionData
     /// <summary>
     /// Gets the employee entries as an array of <see cref="FullPaymentSubmissionEmployeeEntry"/> instances.
     /// </summary>
-    public FullPaymentSubmissionEmployeeEntry[] EmployeeEntries { get; init; } = default!;
+    public IFullPaymentSubmissionEmployeeEntry[] EmployeeEntries { get; init; } = default!;
 
     /// <summary>
     /// Gets data associated with a final FPS, if appropriate.
     /// </summary>
-    public FinalSubmissionData? FinalSubmissionData { get; init; }
+    public IFinalSubmissionData? FinalSubmissionData { get; init; }
 }
