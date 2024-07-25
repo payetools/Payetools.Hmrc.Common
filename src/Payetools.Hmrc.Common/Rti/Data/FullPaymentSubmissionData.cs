@@ -466,6 +466,14 @@ public class FullPaymentSubmissionEmployeeEntry : IFullPaymentSubmissionEmployee
     /// the current period.
     /// </summary>
     public IEmploymentData[] EmploymentDetails { get; init; } = default!;
+
+    /// <summary>
+    /// Initializes a new instance of the <see cref="FullPaymentSubmissionEmployeeEntry"/> class.
+    /// </summary>
+    public FullPaymentSubmissionEmployeeEntry()
+    {
+        EmployeeDetails = new EmployeeDetails();
+    }
 }
 
 /// <summary>

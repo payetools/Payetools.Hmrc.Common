@@ -13,6 +13,7 @@ namespace Payetools.Hmrc.Common.Rti.Data;
 /// <summary>
 /// Interface that provides access to the employee's details.
 /// </summary>
+// [JsonDerivedType(typeof(EmployeeDetails))]
 public interface IEmployeeDetails
 {
     /// <summary>
