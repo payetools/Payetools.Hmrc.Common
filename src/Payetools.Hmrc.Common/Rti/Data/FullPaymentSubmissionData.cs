@@ -447,7 +447,7 @@ public class EmploymentData : IEmploymentData
     /// Gets the National Insurance data needed to populate the <em>Employment</em> element of
     /// the Full Payment Submission message.
     /// </summary>
-    public List<IFpsEmploymentNationalInsuranceData> NiDataEntries { get; init; } = default!;
+    public IFpsEmploymentNationalInsuranceData[] NiDataEntries { get; init; } = default!;
 }
 
 /// <summary>
@@ -459,22 +459,13 @@ public class FullPaymentSubmissionEmployeeEntry : IFullPaymentSubmissionEmployee
     /// <summary>
     /// Gets the employee's details.
     /// </summary>
-    public IEmployeeDetails EmployeeDetails { get; init; }
+    public IEmployeeDetails EmployeeDetails { get; init; } = default!;
 
     /// <summary>
     /// Gets the employee's employment details, including payments made in
     /// the current period.
     /// </summary>
-    public List<IEmploymentData> EmploymentDetails { get; init; }
-
-    /// <summary>
-    /// Initializes a new instance of the <see cref="FullPaymentSubmissionEmployeeEntry"/> class.
-    /// </summary>
-    public FullPaymentSubmissionEmployeeEntry()
-    {
-        EmployeeDetails = new EmployeeDetails();
-        EmploymentDetails = new List<IEmploymentData>();
-    }
+    public IEmploymentData[] EmploymentDetails { get; init; } = default!;
 }
 
 /// <summary>
@@ -515,7 +506,7 @@ public class FullPaymentSubmissionData : IFullPaymentSubmissionData
     /// <summary>
     /// Gets the employee entries as an array of <see cref="FullPaymentSubmissionEmployeeEntry"/> instances.
     /// </summary>
-    public List<IFullPaymentSubmissionEmployeeEntry> EmployeeEntries { get; init; } = default!;
+    public IFullPaymentSubmissionEmployeeEntry[] EmployeeEntries { get; init; } = default!;
 
     /// <summary>
     /// Gets data associated with a final FPS, if appropriate.
