@@ -3,7 +3,7 @@
 // This source code is the intellectual property of Payetools Foundation
 // and for information security purposes is classified as CONFIDENTIAL.
 
-namespace Payetools.Hmrc.Common.Rti.Data;
+namespace Payetools.Hmrc.Common.Rti.Model;
 
 /// <summary>
 /// Interface that provides access to all the data needed to construct an <em>Full Payment Submission.</em>.

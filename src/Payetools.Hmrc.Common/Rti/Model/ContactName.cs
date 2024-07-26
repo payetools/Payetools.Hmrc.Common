@@ -4,7 +4,7 @@
 //
 //   * The MIT License, see https://opensource.org/license/mit/
 
-namespace Payetools.Hmrc.Common.Rti;
+namespace Payetools.Hmrc.Common.Rti.Model;
 
 /// <summary>
 /// Represents the name portion of a contact.

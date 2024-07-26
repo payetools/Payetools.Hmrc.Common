@@ -3,7 +3,7 @@
 // This source code is the intellectual property of Payetools Foundation
 // and for information security purposes is classified as CONFIDENTIAL.
 
-namespace Payetools.Hmrc.Common.Rti;
+namespace Payetools.Hmrc.Common.Rti.Model;
 
 /// <summary>
 /// Interface that provides access to information needed to populate an RTI document.  More

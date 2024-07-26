@@ -4,7 +4,7 @@
 //
 //   * The MIT License, see https://opensource.org/license/mit/
 
-namespace Payetools.Hmrc.Common.Rti;
+namespace Payetools.Hmrc.Common.Rti.Model;
 
 /// <summary>
 /// Enumeration that defines the types of sender within the IRenvelope of the GovTalkMessage.

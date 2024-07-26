@@ -6,7 +6,7 @@
 
 using Payetools.Common.Model;
 
-namespace Payetools.Hmrc.Common.Rti.Data;
+namespace Payetools.Hmrc.Common.Rti.Model;
 
 /// <summary>
 /// Represents a postal address.  If it is a UK address, <see cref="Postcode"/> should be supplied

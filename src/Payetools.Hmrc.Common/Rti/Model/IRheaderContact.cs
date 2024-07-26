@@ -4,7 +4,7 @@
 //
 //   * The MIT License, see https://opensource.org/license/mit/
 
-namespace Payetools.Hmrc.Common.Rti;
+namespace Payetools.Hmrc.Common.Rti.Model;
 
 /// <summary>
 /// Represents (optional) contact information that is inserted into the IRheader.

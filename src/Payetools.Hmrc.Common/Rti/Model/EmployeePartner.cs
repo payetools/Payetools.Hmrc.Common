@@ -6,7 +6,7 @@
 using Payetools.Common.Model;
 using Payetools.Payroll.Model;
 
-namespace Payetools.Hmrc.Common.Rti;
+namespace Payetools.Hmrc.Common.Rti.Model;
 
 /// <summary>
 /// Represents an employee's partner details, which are needed for shared parental pay.
