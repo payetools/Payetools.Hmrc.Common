@@ -11,22 +11,6 @@ using Payetools.Payroll.Model;
 namespace Payetools.Hmrc.Common.Rti.Data;
 
 /// <summary>
-/// Represents an employee's partner details, which are needed for shared parental pay.
-/// </summary>
-public class EmployeePartner
-{
-    /// <summary>
-    /// Gets the partner's National Insurance number.
-    /// </summary>
-    public string NiNumber { get; init; } = default!;
-
-    /// <summary>
-    /// Gets the partner's name details.
-    /// </summary>
-    public ContactName Name { get; init; } = default!;
-}
-
-/// <summary>
 /// Entity that provides access to the employee's details.
 /// </summary>
 public class EmployeeDetails : IEmployeeDetails
