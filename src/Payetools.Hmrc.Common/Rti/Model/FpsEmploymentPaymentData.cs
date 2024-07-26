@@ -71,6 +71,12 @@ public class FpsEmploymentPaymentData : IFpsEmploymentPaymentData
     public string TaxCode { get; set; } = default!;
 
     /// <summary>
+    /// Gets or sets a value indicating whether the employee's tax code is non-cumulative (i.e.,
+    /// the W1/M1 flag is set).
+    /// </summary>
+    public bool? TaxCodeIsNonCumulative { get; set; }
+
+    /// <summary>
     /// Gets or sets the taxable pay in this pay period including payrolled benefits in kind.
     /// </summary>
     public decimal TaxablePay { get; set; }

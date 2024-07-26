@@ -102,6 +102,12 @@ public interface IFpsEmploymentPaymentData
     string TaxCode { get; set; }
 
     /// <summary>
+    /// Gets or sets a value indicating whether the employee's tax code is non-cumulative (i.e.,
+    /// the W1/M1 flag is set).
+    /// </summary>
+    bool? TaxCodeIsNonCumulative { get; set; }
+
+    /// <summary>
     /// Gets or sets the taxable pay in this pay period including payrolled benefits in kind.
     /// </summary>
     decimal TaxablePay { get; set; }
