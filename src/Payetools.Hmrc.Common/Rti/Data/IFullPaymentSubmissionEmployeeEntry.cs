@@ -19,37 +19,37 @@ public interface IEmployeeDetails
     /// <summary>
     /// Gets the employee's National Insurance number.
     /// </summary>
-    string NiNumber { get; }
+    string NiNumber { get; init; }
 
     /// <summary>
     /// Gets the employee's name details.
     /// </summary>
-    ContactName Name { get; }
+    ContactName Name { get; init; }
 
     /// <summary>
     /// Gets the employee's postal address.
     /// </summary>
-    Address Address { get; }
+    Address Address { get; init; }
 
     /// <summary>
     /// Gets the employee's date of birth.
     /// </summary>
-    DateTime DateOfBirth { get; }
+    DateTime DateOfBirth { get; init; }
 
     /// <summary>
     /// Gets the employee's gender.
     /// </summary>
-    Gender Gender { get; }
+    Gender Gender { get; init; }
 
     /// <summary>
     /// Gets the employee's passport number.  Optional.
     /// </summary>
-    string? PassportNumber { get; }
+    string? PassportNumber { get; init; }
 
     /// <summary>
     /// Gets the employee's partner's details.  Optional.
     /// </summary>
-    EmployeePartner? PartnerDetails { get; }
+    EmployeePartner? PartnerDetails { get; init; }
 }
 
 /// <summary>
@@ -68,12 +68,12 @@ public interface IPensionPayment
     /// <summary>
     /// Gets a value indicating whether the employee is bereaved.
     /// </summary>
-    bool? IsBereaved { get; }
+    bool? IsBereaved { get; init; }
 
     /// <summary>
     /// Gets the amount of the payment.
     /// </summary>
-    decimal Amount { get; }
+    decimal Amount { get; init; }
 }
 
 /// <summary>
@@ -84,22 +84,22 @@ public interface IEmploymentNewStarterInfo
     /// <summary>
     /// Gets the start date for the employee.
     /// </summary>
-    DateTime StartDate { get; }
+    DateTime StartDate { get; init; }
 
     /// <summary>
     /// Gets the starter declaration, A, B or C.
     /// </summary>
-    StarterDeclaration Declaration { get; }
+    StarterDeclaration Declaration { get; init; }
 
     /// <summary>
     /// Gets a value indicating whether student loans should continue in the new employment.
     /// </summary>
-    bool? StudentLoanPaymentsToContinue { get; }
+    bool? StudentLoanPaymentsToContinue { get; init; }
 
     /// <summary>
     /// Gets a value indicating whether postgraduate loans should continue in the new employment.
     /// </summary>
-    bool? PostgraduateLoanToContinue { get; }
+    bool? PostgraduateLoanToContinue { get; init; }
 
     // TODO: Implement SecondmentInfo
     // TODO: Implement OccupationalPensionPayment
@@ -116,39 +116,39 @@ public interface IFpsEmploymentYtdData
     /// <summary>
     /// Gets the taxable pay so far this tax year.
     /// </summary>
-    decimal TaxablePayYtd { get; }
+    decimal TaxablePayYtd { get; init; }
 
     /// <summary>
     /// Gets the total tax paid so far this tax year.
     /// </summary>
-    decimal TotalTaxYtd { get; }
+    decimal TotalTaxYtd { get; init; }
 
     /// <summary>
     /// Gets the total amount of student loan deductions so far this tax year.
     /// </summary>
-    decimal StudentLoansYtd { get; }
+    decimal StudentLoansYtd { get; init; }
 
     /// <summary>
     /// Gets the total amount of postgraduate loan deductions so far this tax year.
     /// </summary>
-    decimal PostgradLoansYtd { get; }
+    decimal PostgradLoansYtd { get; init; }
 
     /// <summary>
     /// Gets the total amount of payrolled benefits so far this tax year.
     /// </summary>
-    decimal PayrolledBenefitsYtd { get; }
+    decimal PayrolledBenefitsYtd { get; init; }
 
     /// <summary>
     /// Gets the total amount of employee pension contributions paid under Net Pay Arrangements
     /// so far this tax year.
     /// </summary>
-    decimal EmployeePensionContributionsYtd { get; }
+    decimal EmployeePensionContributionsYtd { get; init; }
 
     /// <summary>
     /// Gets the total amount of employee pension contributions paid outside of Net Pay Arrangements
     /// so far this tax year.
     /// </summary>
-    decimal EmployeePensionContributionsNotPaidYtd { get; }
+    decimal EmployeePensionContributionsNotPaidYtd { get; init; }
 }
 
 /// <summary>
@@ -173,7 +173,7 @@ public interface IFpsEmploymentPaymentData
         /// <summary>
         /// Gets the set of car benefits awarded to an employee.  (Maximum 15 entries.)
         /// </summary>
-        ICarBenefitInfo[] Cars { get; }
+        ICarBenefitInfo[] Cars { get; init; }
     }
 
     /// <summary>
@@ -190,12 +190,12 @@ public interface IFpsEmploymentPaymentData
     /// <summary>
     /// Gets the payment frequency for this payment.
     /// </summary>
-    PayFrequency PayFrequency { get; }
+    PayFrequency PayFrequency { get; init; }
 
     /// <summary>
     /// Gets the date of this payment, typically the pay date.
     /// </summary>
-    DateTime PaymentDate { get; }
+    DateTime PaymentDate { get; init; }
 
     /// <summary>
     /// Gets or sets the reason code for any late submissions.
@@ -206,71 +206,71 @@ public interface IFpsEmploymentPaymentData
     /// Gets the number of periods covered by this payment.  Most usually 1, but can be greater for
     /// payments that cover more than one payment period.
     /// </summary>
-    int NumberOfPeriodsCovered { get; }
+    int NumberOfPeriodsCovered { get; init; }
 
     /// <summary>
     /// Gets a value indicating whether earnings from more than one job have been aggregated together to
     /// calculate NI contributions. Defaults to false if not supplied.
     /// </summary>
-    bool? AggregatedEarningsForNi { get; }
+    bool? AggregatedEarningsForNi { get; init; }
 
     /// <summary>
     /// Gets a value indicating whether this payment was made after an employee left employment.
     /// Defaults to false if not supplied.
     /// </summary>
-    bool? IsPaymentAfterLeaving { get; }
+    bool? IsPaymentAfterLeaving { get; init; }
 
     /// <summary>
     /// Gets the normal number of hours worked by the employee, in HMRC prescribed bands.
     /// </summary>
-    NormalHoursWorkedBand NormalHoursWorked { get; }
+    NormalHoursWorkedBand NormalHoursWorked { get; init; }
 
     /// <summary>
     /// Gets the employee's tax code used for this payment.
     /// </summary>
-    string TaxCode { get; }
+    string TaxCode { get; init; }
 
     /// <summary>
     /// Gets the taxable pay in this pay period including payrolled benefits in kind.
     /// </summary>
-    decimal TaxablePay { get; }
+    decimal TaxablePay { get; init; }
 
     /// <summary>
     /// Gets the value of payments not subject to tax or NICs in the pay period, for example, season
     /// ticket loans.
     /// </summary>
-    decimal? NonTaxOrNiPayment { get; }
+    decimal? NonTaxOrNiPayment { get; init; }
 
     /// <summary>
     /// Gets the value of deductions from net pay in pay period, including tax, NI and
     /// student loans, but also employee pension contributions (under RAS only), attachment of
     /// earnings orders and trade union subscriptions.
     /// </summary>
-    decimal? DeductionsFromNetPay { get; }
+    decimal? DeductionsFromNetPay { get; init; }
 
     /// <summary>
     /// Gets the pay after statutory deductions, not including any figure provided in the
     /// <see cref="NonTaxOrNiPayment"/> field.  Includes the value of any payrolled benefits
     /// in kind.
     /// </summary>
-    decimal? PayAfterStatutoryDeductions { get; }
+    decimal? PayAfterStatutoryDeductions { get; init; }
 
     /// <summary>
     /// Gets the value of benefits taxed via payroll in the pay period.
     /// </summary>
-    decimal? PayrolledBenefits { get; }
+    decimal? PayrolledBenefits { get; init; }
 
     /// <summary>
     /// Gets the total amount of RTI-reported Class 1A NICs paid so far this tax year on
     ///  termination awards which exceed the £30,000 threshold, and/or non-contractual and
     ///  non-customary sporting testimonial payments which exceed the £100,000 threshold.
     /// </summary>
-    decimal? Class1ANICsYtd { get; }
+    decimal? Class1ANICsYtd { get; init; }
 
     /// <summary>
     /// Gets the value of employee pension contributions paid under 'net pay arrangements' in pay period.
     /// </summary>
-    decimal? EmployeePensionContributionsUnderNPA { get; }
+    decimal? EmployeePensionContributionsUnderNPA { get; init; }
 
     /// <summary>
     /// Gets the value of iItems subject to Class 1 NIC but not taxed under PAYE regulations excluding
@@ -278,38 +278,38 @@ public interface IFpsEmploymentPaymentData
     /// vouchers, payments of employee’s personal liabilities to third party such as home utility bills paid
     /// by employer.
     /// </summary>
-    decimal? ItemsSubjectToClass1NIC { get; }
+    decimal? ItemsSubjectToClass1NIC { get; init; }
 
     /// <summary>
     /// Gets the value of employee pension contributions paid outside of 'net pay arrangements' in pay period.
     /// </summary>
-    decimal? EmployeePensionContributionsOutsideNPA { get; }
+    decimal? EmployeePensionContributionsOutsideNPA { get; init; }
 
     /// <summary>
     /// Gets the value of student loan repayments in this pay period.
     /// </summary>
-    decimal? StudentLoanPayments { get; }
+    decimal? StudentLoanPayments { get; init; }
 
     /// <summary>
     /// Gets the student loan plan type, where appropriate.
     /// </summary>
-    StudentLoanType? StudentLoanType { get; }
+    StudentLoanType? StudentLoanType { get; init; }
 
     /// <summary>
     /// Gets the value of postgraduate loan repayments in this pay period.
     /// </summary>
-    decimal? PostgraduateLoanPayments { get; }
+    decimal? PostgraduateLoanPayments { get; init; }
 
     /// <summary>
     /// Gets the value of tax deducted or refunded from this payment.
     /// </summary>
-    decimal TaxDeductedOrRefunded { get; }
+    decimal TaxDeductedOrRefunded { get; init; }
 
     /// <summary>
     /// Gets a value indicating whether the employee's pay has been reduced due to
     /// being on strike within the payment period. Defaults to false if not supplied.
     /// </summary>
-    bool? OnStrike { get; }
+    bool? OnStrike { get; init; }
 
     // Note: UnpaidAbsence is omitted as the HMRC guidance states "Do not complete this
     // field at present".
@@ -317,27 +317,27 @@ public interface IFpsEmploymentPaymentData
     /// <summary>
     /// Gets the value of Statutory Maternity pay (SMP) year to date, if any.
     /// </summary>
-    decimal? SMPPaidYtd { get; }
+    decimal? SMPPaidYtd { get; init; }
 
     /// <summary>
     /// Gets the value of Statutory Paternity pay (SPP) year to date, if any.
     /// </summary>
-    decimal? SPPPaidYtd { get; }
+    decimal? SPPPaidYtd { get; init; }
 
     /// <summary>
     /// Gets the value of Statutory Adoption pay (SAP) year to date, if any.
     /// </summary>
-    decimal? SAPPaidYtd { get; }
+    decimal? SAPPaidYtd { get; init; }
 
     /// <summary>
     /// Gets the value of Shared Parental pay (ShPP) year to date, if any.
     /// </summary>
-    decimal? ShPPPaidYtd { get; }
+    decimal? ShPPPaidYtd { get; init; }
 
     /// <summary>
     /// Gets the value of Statutory Parental Bereavement pay (SPBP) year to date, if any.
     /// </summary>
-    decimal? SPBPPaidYtd { get; }
+    decimal? SPBPPaidYtd { get; init; }
 
     /// <summary>
     /// Gets the optional BACS hash code to be included this section of the FPS.
@@ -361,67 +361,66 @@ public interface IFpsEmploymentNationalInsuranceData
     /// <summary>
     /// Gets the NI category (aka NI letter)for this entry.
     /// </summary>
-    NiCategory NiCategory { get; }
+    NiCategory NiCategory { get; init; }
 
     /// <summary>
     /// Gets the gross NIC-able earnings in the period.
     /// </summary>
-    decimal GrossEarningsForNICsInPeriod { get; }
+    decimal GrossEarningsForNICsInPeriod { get; init; }
 
     /// <summary>
     /// Gets the gross NIC-able earnings in the tax year to date.  As per HMRC guidance, this figure
     /// does not include earnings that did not reach the LEL in any earnings period.
     /// </summary>
-    decimal GrossEarningsForNICsYtd { get; }
+    decimal GrossEarningsForNICsYtd { get; init; }
 
     /// <summary>
     /// Gets the earnings at the LEL year to date.
     /// </summary>
-    decimal AtLELYtd { get; }
+    decimal AtLELYtd { get; init; }
 
     /// <summary>
     /// Gets the earnings above the LEL and up to and including the PT year to date.
     /// </summary>
-    decimal LELtoPTYtd { get; }
+    decimal LELtoPTYtd { get; init; }
 
     /// <summary>
     /// Gets the earnings above the PT and up to and including the UEL year to date.
     /// </summary>
-    decimal PTtoUELYtd { get; }
+    decimal PTtoUELYtd { get; init; }
 
     /// <summary>
     /// Gets the total employer NI contributions in the period.
     /// </summary>
-    decimal TotalEmployerNICsInPeriod { get; }
+    decimal TotalEmployerNICsInPeriod { get; init; }
 
     /// <summary>
     /// Gets the total employer NI contributions year to date.
     /// </summary>
-    decimal TotalEmployerNICsYtd { get; }
+    decimal TotalEmployerNICsYtd { get; init; }
 
     /// <summary>
     /// Gets the total employee NI contributions in the period.
     /// </summary>
-    decimal EmployeeNICsInPeriod { get; }
+    decimal EmployeeNICsInPeriod { get; init; }
 
     /// <summary>
     /// Gets the total employee NI contributions year to date.
     /// </summary>
-    decimal EmployeeNICsYtd { get; }
+    decimal EmployeeNICsYtd { get; init; }
 }
 
 /// <summary>
 /// Interface that provides access to the data set needed to construct an employee pay run
 /// entry within a Full Payment Submission.
 /// </summary>
-[JsonDerivedType(typeof(EmploymentData))]
 public interface IEmploymentData
 {
     /// <summary>
     /// Gets a value indicating whether the employment is treated as 'off payroll'.
     /// Defaults to false if not supplied.
     /// </summary>
-    bool? IsOffPayrollWorker { get; }
+    bool? IsOffPayrollWorker { get; init; }
 
     /// <summary>
     /// Gets a value indicating whether payments to an individual are from pension or income provided
@@ -429,64 +428,64 @@ public interface IEmploymentData
     /// trivial commutation payments, flexibly accessed pensions or an uncrystallised funds pension
     /// lump sum). Defaults to false if not supplied.
     /// </summary>
-    bool? IsOccupationalPensionPayment { get; }
+    bool? IsOccupationalPensionPayment { get; init; }
 
     /// <summary>
     /// Gets the director's NI calculation method used. Null if the employee is not a director.
     /// </summary>
-    DirectorsNiCalculationMethod? DirectorsNiCalculationMethod { get; }
+    DirectorsNiCalculationMethod? DirectorsNiCalculationMethod { get; init; }
 
     /// <summary>
     /// Gets the tax week that a director was appointed, if that appointment took place during the
     /// current tax year.
     /// </summary>
-    uint? TaxWeekOfApptOfDirector { get; }
+    uint? TaxWeekOfApptOfDirector { get; init; }
 
     /// <summary>
     /// Gets new starter information for the employee, if appropriate.
     /// </summary>
-    IEmploymentNewStarterInfo? NewStarterInfo { get; }
+    IEmploymentNewStarterInfo? NewStarterInfo { get; init; }
 
     /// <summary>
     /// Gets the payroll ID for the employee.  Includes information about any recent change.
     /// </summary>
-    string PayrollId { get; }
+    string PayrollId { get; init; }
 
     /// <summary>
     /// Gets a value indicating whether this payment is not being made to an individual.
     /// Defaults to false if not supplied.
     /// </summary>
-    bool? IsPaymentToNonIndividual { get; }
+    bool? IsPaymentToNonIndividual { get; init; }
 
     /// <summary>
     /// Gets a value indicating whether the employee is paid irregularly. Defaults to false
     /// if not supplied.
     /// </summary>
-    bool? IsPaidIrregularly { get; }
+    bool? IsPaidIrregularly { get; init; }
 
     /// <summary>
     /// Gets the employee's leaving date, if appropriate.  Null if the employee's employment is
     /// continuing.
     /// </summary>
-    DateTime? LeavingDate { get; }
+    DateTime? LeavingDate { get; init; }
 
     /// <summary>
     /// Gets the employee year to date data needed to populate the <em>Employment</em> element of
     /// the Full Payment Submission message.
     /// </summary>
-    IFpsEmploymentYtdData YtdFigures { get; }
+    IFpsEmploymentYtdData YtdFigures { get; init; }
 
     /// <summary>
     /// Gets the employee pay run data needed to populate the <em>Employment</em> element of the
     /// Full Payment Submission message.
     /// </summary>
-    IFpsEmploymentPaymentData PaymentDetails { get; }
+    IFpsEmploymentPaymentData PaymentDetails { get; init; }
 
     /// <summary>
     /// Gets the National Insurance data needed to populate the <em>Employment</em> element of
     /// the Full Payment Submission message.
     /// </summary>
-    List<IFpsEmploymentNationalInsuranceData> NiDataEntries { get; }
+    List<IFpsEmploymentNationalInsuranceData> NiDataEntries { get; init; }
 }
 
 /// <summary>
@@ -498,10 +497,10 @@ public interface IFullPaymentSubmissionEmployeeEntry
     /// <summary>
     /// Gets the employee's details.
     /// </summary>
-    IEmployeeDetails EmployeeDetails { get; }
+    IEmployeeDetails EmployeeDetails { get; init; }
 
     /// <summary>
     /// Gets the employee's employment details, including payments made in the current period.
     /// </summary>
-    List<IEmploymentData> EmploymentDetails { get; }
+    List<IEmploymentData> EmploymentDetails { get; init; }
 }

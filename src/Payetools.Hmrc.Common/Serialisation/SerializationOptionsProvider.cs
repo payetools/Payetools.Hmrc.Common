@@ -52,15 +52,8 @@ public class SerializationOptionsProvider
             modifiers.Add(
                 (typeInfo) =>
                     {
-                        if (typeInfo.Type != types.Item1) return;
-                        typeInfo.CreateObject = () =>
-                        {
-                            var obj = Activator.CreateInstance(types.Item2, nonPublic: true);
-
-                            Console.WriteLine(obj != null ? $"Successfully created object of type {types.Item2.Name}" : $"CreateInstance for object of type {types.Item2.Name} returned null");
-
-                            return obj!;
-                        };
+                        if (typeInfo.Type == types.Item1)
+                            typeInfo.CreateObject = () => Activator.CreateInstance(types.Item2, nonPublic: true)!;
                     }));
 
         var typeInfoResolver = new DefaultJsonTypeInfoResolver();
