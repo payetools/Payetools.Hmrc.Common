@@ -13,28 +13,36 @@ public class IRenvelopeData : IRtiDocumentDataSource
     /// <summary>
     /// Gets the period end date for the data within the contained FPS/EPS/NVR message.
     /// </summary>
-    public DateTime PeriodEnd { get; }
+    public DateTime PeriodEnd { get; init; }
 
     /// <summary>
     /// Gets optional header contact details.  If no header contact details are provided, then the
     /// <see cref="IRheaderContact.ContactType"/> property must be set to None.
     /// </summary>
-    public IRheaderContact IRheaderContact { get; }
+    public IRheaderContact IRheaderContact { get; init; } = default!;
 
     /// <summary>
     /// Gets the message sender type.
     /// </summary>
-    public IRheaderSenderType Sender { get; }
+    public IRheaderSenderType Sender { get; init; }
 
     /// <summary>
     /// Gets the HMRC accounts office reference.
     /// </summary>
-    public string? AccountsOfficeReference { get; }
+    public string? AccountsOfficeReference { get; init; }
 
     /// <summary>
     /// Gets the HMRC PAYE reference.
     /// </summary>
-    public string? HmrcPayeReference { get; }
+    public string? HmrcPayeReference { get; init; }
+
+    /// <summary>
+    /// Initializes a new instance of the <see cref="IRenvelopeData"/> class.  Intended primarily for
+    /// serialisation support.
+    /// </summary>
+    public IRenvelopeData()
+    {
+    }
 
     /// <summary>
     /// Initializes a new instance of a <see cref="IRenvelopeData"/> with the supplied parameters.

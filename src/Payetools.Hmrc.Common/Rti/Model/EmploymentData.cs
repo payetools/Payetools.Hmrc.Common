@@ -15,57 +15,70 @@ namespace Payetools.Hmrc.Common.Rti.Model;
 public class EmploymentData : IEmploymentData
 {
     /// <summary>
-    /// Gets a value indicating whether the employment is treated as 'off payroll'. Defaults to
+    /// Gets or sets a value indicating whether the employment is treated as 'off payroll'. Defaults to
     /// false if not supplied.
     /// </summary>
-    public bool? IsOffPayrollWorker { get; init; }
+    public bool? IsOffPayrollWorker { get; set; }
 
     /// <summary>
-    /// Gets a value indicating whether payments to an individual are from pension or income provided
+    /// Gets or sets a value indicating whether payments to an individual are from pension or income provided
     /// from registered pension schemes (including annuities, income from drawdown arrangements,
     /// trivial commutation payments, flexibly accessed pensions or an uncrystallised funds pension
     /// lump sum). Defaults to false if not supplied.
     /// </summary>
-    public bool? IsOccupationalPensionPayment { get; init; }
+    public bool? IsOccupationalPensionPayment { get; set; }
 
     /// <summary>
-    /// Gets the director's NI calculation method used. Null if the employee is not a director.
+    /// Gets or sets the director's NI calculation method used. Null if the employee is not a director.
     /// </summary>
-    public DirectorsNiCalculationMethod? DirectorsNiCalculationMethod { get; init; }
+    public DirectorsNiCalculationMethod? DirectorsNiCalculationMethod { get; set; }
 
     /// <summary>
-    /// Gets the tax week that a director was appointed, if that appointment took place during the
+    /// Gets or sets the tax week that a director was appointed, if that appointment took place during the
     /// current tax year.
     /// </summary>
-    public uint? TaxWeekOfApptOfDirector { get; init; }
+    public uint? TaxWeekOfApptOfDirector { get; set; }
 
     /// <summary>
-    /// Gets new starter information for the employee, if appropriate.
+    /// Gets or sets new starter information for the employee, if appropriate.
     /// </summary>
-    public IEmploymentNewStarterInfo? NewStarterInfo { get; init; }
+    public IEmploymentNewStarterInfo? NewStarterInfo { get; set; }
 
     /// <summary>
-    /// Gets the payroll ID for the employee.  Includes information about any recent change.
+    /// Gets or sets the payroll ID for the employee.  Includes information about any recent change.
     /// </summary>
-    public string PayrollId { get; init; } = default!;
+    public string PayrollId { get; set; } = default!;
 
     /// <summary>
-    /// Gets a value indicating whether this payment is not being made to an individual. Defaults to
+    /// Gets or sets a value indicating whether the supplied payroll id has been changed.  If set to
+    /// true, then the <see cref="PreviousPayrollId"/> property should be populated with the previous
+    /// payroll id.
+    /// </summary>
+    public bool? PayrollIdChanged { get; set; }
+
+    /// <summary>
+    /// Gets or sets the previous payroll id, if appropriate. Ignored unless <see cref="PayrollIdChanged"/>
+    /// is set to true.
+    /// </summary>
+    public string? PreviousPayrollId { get; set; }
+
+    /// <summary>
+    /// Gets or sets a value indicating whether this payment is not being made to an individual. Defaults to
     /// false if not supplied.
     /// </summary>
-    public bool? IsPaymentToNonIndividual { get; init; }
+    public bool? IsPaymentToNonIndividual { get; set; }
 
     /// <summary>
-    /// Gets a value indicating whether the employee is paid irregularly. Defaults to
+    /// Gets or sets a value indicating whether the employee is paid irregularly. Defaults to
     /// false if not supplied.
     /// </summary>
-    public bool? IsPaidIrregularly { get; init; }
+    public bool? IsPaidIrregularly { get; set; }
 
     /// <summary>
-    /// Gets the employee's leaving date, if appropriate.  Null if the employee's employment is
+    /// Gets or sets the employee's leaving date, if appropriate.  Null if the employee's employment is
     /// continuing.
     /// </summary>
-    public DateTime? LeavingDate { get; init; }
+    public DateTime? LeavingDate { get; set; }
 
     /// <summary>
     /// Gets the employee year to date data needed to populate the <em>Employment</em> element of
@@ -74,7 +87,7 @@ public class EmploymentData : IEmploymentData
     public IFpsEmploymentYtdData YtdFigures { get; init; } = default!;
 
     /// <summary>
-    /// Gets the employee pay run data needed to populate the <em>Employment</em> element of the
+    /// Gets employee pay run data needed to populate the <em>Employment</em> element of the
     /// Full Payment Submission message.
     /// </summary>
     public IFpsEmploymentPaymentData PaymentDetails { get; init; } = default!;

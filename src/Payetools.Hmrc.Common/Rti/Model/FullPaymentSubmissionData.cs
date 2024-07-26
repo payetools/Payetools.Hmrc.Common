@@ -27,22 +27,19 @@ public class FullPaymentSubmissionData : IRenvelopeData, IFullPaymentSubmissionD
     public IFinalSubmissionData? FinalSubmissionData { get; init; }
 
     /// <summary>
+    /// Initializes a new instance of the <see cref="FullPaymentSubmissionData"/> class. Intended primarily
+    /// for use in deserialisation.
+    /// </summary>
+    public FullPaymentSubmissionData()
+    {
+    }
+
+    /// <summary>
     /// Initializes a new instance of a <see cref="FullPaymentSubmissionData"/> with the supplied parameters.
     /// </summary>
     /// <param name="envelopeData">IRenvelope data including PAYE reference and accounts office reference.</param>
-    /// <param name="corporationTaxReference">HMRC Corporation Tax reference. May be null.</param>
-    /// <param name="employeeEntries">Employee details and pay dato be included within the target Full
-    /// Payment Submission.</param>
-    /// <param name="finalSubmissionData">Data about a final FPS of a PAYE scheme or of the tax year.  Optional.</param>
-    public FullPaymentSubmissionData(
-        IRenvelopeData envelopeData,
-        string? corporationTaxReference,
-        IEnumerable<IFullPaymentSubmissionEmployeeEntry> employeeEntries,
-        IFinalSubmissionData? finalSubmissionData = null)
+    public FullPaymentSubmissionData(IRenvelopeData envelopeData)
         : base(envelopeData)
     {
-        CorporationTaxReference = corporationTaxReference;
-        EmployeeEntries = employeeEntries.ToArray();
-        FinalSubmissionData = finalSubmissionData;
     }
 }
