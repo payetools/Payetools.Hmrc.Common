@@ -4,6 +4,8 @@
 //
 //   * The MIT License, see https://opensource.org/license/mit/
 
+using Payetools.Hmrc.Common.Rti.Model;
+
 namespace Payetools.Hmrc.Common.Rti;
 
 /// <summary>
@@ -21,6 +23,13 @@ public interface IRtiSubmissionResponse
     /// submission passed initial validation.
     /// </summary>
     string? CorrelationId { get; init; }
+
+    /// <summary>
+    /// Gets the type of the response, typically indicating an acknowledeged submission
+    /// (<see cref="RtiResponseType.SubmissionAcknowledgement"/>) or an error condition
+    /// (<see cref="RtiResponseType.ErrorResponse"/>).
+    /// </summary>
+    RtiResponseType ResponseType { get; init; }
 
     /// <summary>
     /// Gets a Base64-encoded representation of the complete XML submission.
