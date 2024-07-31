@@ -4,10 +4,9 @@
 //
 //   * The MIT License, see https://opensource.org/license/mit/
 
-using Payetools.Hmrc.Common.Rti;
 using Payetools.Hmrc.Common.Rti.Model;
 
-namespace Payetools.Hmrc.Common;
+namespace Payetools.Hmrc.Common.Rti;
 
 /// <summary>
 /// Interface that provides access to header items for a given RTI submission.
@@ -31,4 +30,9 @@ public interface ISubmissionHeader
     /// Gets the options that specify responses to the submission should be handled.
     /// </summary>
     IRtiSubmissionResponseOptions ResponseOptions { get; init; }
+
+    /// <summary>
+    /// Gets the email to be used by HMRC to send notifications regarding this submission.
+    /// </summary>
+    string NotificationEmail { get; init; }
 }
