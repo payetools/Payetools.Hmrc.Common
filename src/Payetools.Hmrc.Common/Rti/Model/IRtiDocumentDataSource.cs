@@ -16,25 +16,25 @@ public interface IRtiDocumentDataSource
     /// <summary>
     /// Gets the relevant period end date.
     /// </summary>
-    DateTime PeriodEnd { get; }
+    DateTime PeriodEnd { get; init; }
 
     /// <summary>
     /// Gets the optional contact details to be inserted into the IRheader.
     /// </summary>
-    IRheaderContact IRheaderContact { get; } // TODO: Implement complete IRheader contact type and mapping
+    IRheaderContact IRheaderContact { get; init; } // TODO: Implement complete IRheader contact type and mapping
 
     /// <summary>
     /// Gets the message sender type.
     /// </summary>
-    public IRheaderSenderType Sender { get; }
+    public IRheaderSenderType Sender { get; init; }
 
     /// <summary>
     /// Gets the HMRC PAYE reference for this RTI document.
     /// </summary>
-    string? HmrcPayeReference { get; }
+    string? HmrcPayeReference { get; init; }
 
     /// <summary>
     /// Gets the HMRC accounts office referece for this RTI document.
     /// </summary>
-    string? AccountsOfficeReference { get; }
+    string? AccountsOfficeReference { get; init; }
 }
