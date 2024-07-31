@@ -33,7 +33,7 @@ public class SubmissionHeader : ISubmissionHeader
     public IRtiSubmissionResponseOptions ResponseOptions { get; init; } = new RtiSubmissionResponseOptions();
 
     /// <summary>
-    /// Gets the email to be used by HMRC to send notifications regarding this submission.
+    /// Gets the email to be used by HMRC to send notifications regarding this submission. Optional.
     /// </summary>
-    public string NotificationEmail { get; init; } = string.Empty;
+    public string? NotificationEmail { get; init; }
 }
