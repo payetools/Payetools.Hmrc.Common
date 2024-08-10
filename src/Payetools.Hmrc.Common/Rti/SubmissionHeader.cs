@@ -4,31 +4,36 @@
 //
 //   * The MIT License, see https://opensource.org/license/mit/
 
-using Payetools.Hmrc.Common.Rti;
 using Payetools.Hmrc.Common.Rti.Model;
 
-namespace Payetools.Hmrc.Common;
+namespace Payetools.Hmrc.Common.Rti;
 
 /// <summary>
-/// Interface that provides access to header items for a given RTI submission.
+/// Entity that provides access to header items for a given RTI submission.
 /// </summary>
-public interface ISubmissionHeader
+public class SubmissionHeader : ISubmissionHeader
 {
     /// <summary>
     /// Gets the RTI credentials used for the submission; this is typically the Government Gateway
     /// login username and password for the employer or its agent.
     /// </summary>
-    IRtiCredentials Credentials { get; init; }
+    public IRtiCredentials Credentials { get; init; } = default!;
 
     /// <summary>
     /// Gets the test transmission mode; indicates whether the message should be submitted to the
     /// test or live gateway, and in the case of the latter, whether the message should be treated as
-    /// a production or test-in-live message.
+    /// a production or test-in-live message.  Defaults to <see cref="TestSubmissionMode.None"/>,
+    /// i.e., live production submission.
     /// </summary>
-    TestSubmissionMode TestSubmissionMode { get; init; }
+    public TestSubmissionMode TestSubmissionMode { get; init; } = TestSubmissionMode.None;
 
     /// <summary>
     /// Gets the options that specify responses to the submission should be handled.
     /// </summary>
-    IRtiSubmissionResponseOptions ResponseOptions { get; init; }
+    public IRtiSubmissionResponseOptions ResponseOptions { get; init; } = new RtiSubmissionResponseOptions();
+
+    /// <summary>
+    /// Gets the email to be used by HMRC to send notifications regarding this submission. Optional.
+    /// </summary>
+    public string? NotificationEmail { get; init; }
 }
