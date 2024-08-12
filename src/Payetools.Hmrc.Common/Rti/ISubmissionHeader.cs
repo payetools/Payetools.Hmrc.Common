@@ -34,5 +34,5 @@ public interface ISubmissionHeader
     /// <summary>
     /// Gets the email to be used by HMRC to send notifications regarding this submission. Optional.
     /// </summary>
-    string? NotificationEmail { get; init; }
+    string? HmrcNotificationEmail { get; init; }
 }

@@ -35,5 +35,5 @@ public class SubmissionHeader : ISubmissionHeader
     /// <summary>
     /// Gets the email to be used by HMRC to send notifications regarding this submission. Optional.
     /// </summary>
-    public string? NotificationEmail { get; init; }
+    public string? HmrcNotificationEmail { get; init; }
 }
