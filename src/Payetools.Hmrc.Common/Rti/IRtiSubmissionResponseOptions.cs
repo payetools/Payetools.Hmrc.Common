@@ -12,9 +12,10 @@ namespace Payetools.Hmrc.Common.Rti;
 public interface IRtiSubmissionResponseOptions
 {
     /// <summary>
-    /// Gets an optional location to address subsequent submission responses to.
+    /// Gets an optional value indicating whether to redact the password field of the submission credentials in
+    /// any response. Defaults to true.
     /// </summary>
-    string? ReplyTo { get; init; }
+    bool? RedactSubmissionPassword { get; init; }
 
     /// <summary>
     /// Gets a value indicating whether to include the full content of the submission (typically
