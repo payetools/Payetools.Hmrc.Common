@@ -12,15 +12,6 @@ namespace Payetools.Hmrc.Common.Rti;
 /// Interface that represents the full set of data needed to make an Full Payment Submission,
 /// including header data used to populate elements of the GovTalkMessage header.
 /// </summary>
-public interface IFullPaymentSubmission
+public interface IFullPaymentSubmission : IRtiSubmissionDocument<IFullPaymentSubmissionData>
 {
-    /// <summary>
-    /// Gets the header data elements such as submission credentials and test mode indicator.
-    /// </summary>
-    ISubmissionHeader Header { get; init; }
-
-    /// <summary>
-    /// Gets the submission content.
-    /// </summary>
-    IFullPaymentSubmissionData Submission { get; init; }
 }

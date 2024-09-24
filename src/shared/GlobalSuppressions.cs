@@ -27,5 +27,6 @@ using System.Diagnostics.CodeAnalysis;
 [assembly: SuppressMessage("Style", "IDE0290:Use primary constructor", Justification = ".NET 8.0 or above")]
 [assembly: SuppressMessage("Style", "IDE0300:Simplify collection initialization", Justification = ".NET 8.0 or above")]
 [assembly: SuppressMessage("Style", "IDE0090:Use 'new(...)'", Justification = "Preference")]
+[assembly: SuppressMessage("StyleCop.CSharp.ReadabilityRules", "SA1127:Generic type constraints should be on their own line", Justification = "Disagree")]
 
 [assembly: SuppressMessage("StyleCop.CSharp.SpacingRules", "SA1009:Closing parenthesis should be spaced correctly", Justification = "False positive", Scope = "member", Target = "~M:Payetools.Hmrc.Common.Serialisation.SerializationOptionsProvider.GetOptions(System.Text.Json.JsonSerializerOptions)~System.Text.Json.JsonSerializerOptions")]

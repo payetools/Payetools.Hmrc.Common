@@ -12,15 +12,6 @@ namespace Payetools.Hmrc.Common.Rti;
 /// Interface that represents a full NINO verification request, including header data used to
 /// populate elements of the GovTalkMessage header.
 /// </summary>
-public interface INinoVerificationRequest
+public interface INinoVerificationRequest : IRtiSubmissionDocument<INinoVerificationRequestData>
 {
-    /// <summary>
-    /// Gets the header data elements such as submission credentials and test mode indicator.
-    /// </summary>
-    ISubmissionHeader Header { get; init; }
-
-    /// <summary>
-    /// Gets the submission content.
-    /// </summary>
-    INinoVerificationRequestData Submission { get; init; }
 }
