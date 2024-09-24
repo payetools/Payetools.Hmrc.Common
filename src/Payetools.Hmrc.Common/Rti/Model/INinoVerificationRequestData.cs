@@ -3,12 +3,10 @@
 // This source code is the intellectual property of Payetools Foundation
 // and for information security purposes is classified as CONFIDENTIAL.
 
-using Payetools.Hmrc.Common.Rti.Model;
-
-namespace Payetools.Hmrc.Rti.Model.Population;
+namespace Payetools.Hmrc.Common.Rti.Model;
 
 /// <summary>
-/// Entity that contains  the data set needed to populate a NINO Verfication Request.
+/// Interface that provides access to the data set needed to populate a NINO Verification Request.
 /// </summary>
 public interface INinoVerificationRequestData : IRtiDocumentDataSource
 {

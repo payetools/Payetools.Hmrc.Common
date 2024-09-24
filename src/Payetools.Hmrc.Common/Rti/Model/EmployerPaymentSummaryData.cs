@@ -1,19 +1,18 @@
-﻿// Copyright (c) 2023-2024 Payetools Foundation.  All rights reserved.
+﻿// Copyright (c) 2023-2024, Payetools Foundation.
 //
-// This source code is the intellectual property of Payetools Foundation
-// and for information security purposes is classified as CONFIDENTIAL.
+// Payetools Foundation licenses this file to you under the following license(s):
+//
+//   * The MIT License, see https://opensource.org/license/mit/
 
 using Payetools.Common.Model;
-using Payetools.Hmrc.Common.Rti;
-using Payetools.Hmrc.Common.Rti.Model;
 using Payetools.Payroll.Model;
 
-namespace Payetools.Hmrc.Rti.Model.Population;
+namespace Payetools.Hmrc.Common.Rti.Model;
 
 /// <summary>
 /// Entity that contains  the data set needed to populate a Employer Payment Summary.
 /// </summary>
-public class EmploymentPaymentSummaryData : IRenvelopeData, IEmployerPaymentSummaryData
+public class EmployerPaymentSummaryData : IRenvelopeData, IEmployerPaymentSummaryData
 {
     /// <summary>
     /// Gets the Corporation Tax reference for the employer. May be null.
@@ -70,7 +69,7 @@ public class EmploymentPaymentSummaryData : IRenvelopeData, IEmployerPaymentSumm
     public IFinalSubmissionData? FinalSubmissionData { get; }
 
     /// <summary>
-    /// Initializes a new instance of the <see cref="EmploymentPaymentSummaryData"/> class.
+    /// Initializes a new instance of the <see cref="EmployerPaymentSummaryData"/> class.
     /// </summary>
     /// <param name="envelopeData">IRenvelope data including PAYE reference and accounts office reference.</param>
     /// <param name="corporationTaxReference">Corporation tax reference, if available. May be null.</param>
@@ -84,7 +83,7 @@ public class EmploymentPaymentSummaryData : IRenvelopeData, IEmployerPaymentSumm
     /// <param name="apprenticeLevy">Apprentice levy information, if appropriate. Otherwise null.</param>
     /// <param name="account">Bank account for repayments, if available. Otherwise null.</param>
     /// <param name="finalSubmissionData">Final submission information, if appropriate. Otherwise null.</param>
-    public EmploymentPaymentSummaryData(
+    public EmployerPaymentSummaryData(
         IRenvelopeData envelopeData,
         string? corporationTaxReference,
         DateRange? noPaymentDates,

@@ -4,9 +4,7 @@
 //
 //   * The MIT License, see https://opensource.org/license/mit/
 
-using Payetools.Hmrc.Common.Rti.Model;
-
-namespace Payetools.Hmrc.Rti.Model;
+namespace Payetools.Hmrc.Common.Rti.Model;
 
 /// <summary>
 /// Represents the set of credentials used to authenticate with the RTI service.

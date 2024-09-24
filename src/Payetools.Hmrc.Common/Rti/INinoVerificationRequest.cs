@@ -4,7 +4,7 @@
 //
 //   * The MIT License, see https://opensource.org/license/mit/
 
-using Payetools.Hmrc.Rti.Model.Population;
+using Payetools.Hmrc.Common.Rti.Model;
 
 namespace Payetools.Hmrc.Common.Rti;
 

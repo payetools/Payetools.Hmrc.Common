@@ -9,38 +9,38 @@ using Payetools.Common.Model;
 namespace Payetools.Hmrc.Common.Rti.Model;
 
 /// <summary>
-/// Interface that provides access to the data set needed to populate a NINO Verification Request.
+/// Entity that contains the data set needed to populate a NINO Verfication Request.
 /// </summary>
-public interface INinoVerificationRequestEmployeeEntry
+public class NinoVerificationRequestEmployeeEntry : INinoVerificationRequestEmployeeEntry
 {
     /// <summary>
     /// Gets the name of the individual that this NVR relates to.
     /// </summary>
-    ContactName Name { get; }
+    public ContactName Name { get; init; } = default!;
 
     /// <summary>
     /// Gets the date of birth of the individual that this NVR relates to.
     /// </summary>
-    DateOnly DateOfBirth { get; }
+    public DateOnly DateOfBirth { get; init; }
 
     /// <summary>
     /// Gets the postal address of the individual that this NVR relates to.
     /// </summary>
-    PostalAddress PostalAddress { get; }
+    public PostalAddress PostalAddress { get; init; } = default!;
 
     /// <summary>
     /// Gets the National Insurance number of the individual that this NVR relates to,
     /// if known. Null otherwise.
     /// </summary>
-    NiNumber? NiNumber { get; }
+    public NiNumber? NiNumber { get; init; }
 
     /// <summary>
     /// Gets the gender of the individual that this NVR relates to.
     /// </summary>
-    Gender Gender { get; }
+    public Gender Gender { get; init; }
 
     /// <summary>
     /// Gets the payroll ID of the individual that this NVR relates to.
     /// </summary>
-    PayrollId PayrollId { get; }
+    public PayrollId PayrollId { get; init; } = default!;
 }
