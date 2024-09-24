@@ -95,7 +95,7 @@ public class SerializationOptionsProvider
     /// <param name="options">Options <see cref="JsonSerializerOptions"/> instance to use for initialising
     /// the resulting options. If absent, then the default (web-style) options are used.</param>
     /// <returns><see cref="JsonSerializerOptions"/> instance suitably initialised.</returns>
-    public static JsonSerializerOptions GetFpsSerialisationOptions(
+    public static JsonSerializerOptions GetRtiDocumentSerialisationOptions(
         RtiDocumentType documentType,
         Type targetType,
         JsonSerializerOptions? options = null)
