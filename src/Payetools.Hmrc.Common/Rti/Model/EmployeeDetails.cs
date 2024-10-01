@@ -14,37 +14,37 @@ namespace Payetools.Hmrc.Common.Rti.Model;
 public class EmployeeDetails : IEmployeeDetails
 {
     /// <summary>
-    /// Gets or setsthe employee's National Insurance number.
+    /// Gets or sets the employee's National Insurance number.
     /// </summary>
     public string NiNumber { get; set; } = default!;
 
     /// <summary>
-    /// Gets or setsthe employee's name details.
+    /// Gets or sets the employee's name details.
     /// </summary>
     public ContactName Name { get; set; } = default!;
 
     /// <summary>
-    /// Gets or setsthe employee's postal address.
+    /// Gets or sets the employee's postal address.
     /// </summary>
     public Address Address { get; set; } = default!;
 
     /// <summary>
-    /// Gets or setsthe employee's date of birth.
+    /// Gets or sets the employee's date of birth.
     /// </summary>
     public DateTime DateOfBirth { get; set; }
 
     /// <summary>
-    /// Gets or setsthe employee's gender.
+    /// Gets or sets the employee's gender.
     /// </summary>
     public Gender Gender { get; set; }
 
     /// <summary>
-    /// Gets or setsthe employee's passport number. Optional.
+    /// Gets or sets the employee's passport number. Optional.
     /// </summary>
     public string? PassportNumber { get; set; }
 
     /// <summary>
-    /// Gets or setsthe employee's partner's details. Optional.
+    /// Gets or sets the employee's partner's details. Optional.
     /// </summary>
     public EmployeePartner? PartnerDetails { get; set; }
 }
