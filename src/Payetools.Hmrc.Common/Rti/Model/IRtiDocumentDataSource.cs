@@ -34,7 +34,7 @@ public interface IRtiDocumentDataSource
     string? HmrcPayeReference { get; init; }
 
     /// <summary>
-    /// Gets the HMRC accounts office referece for this RTI document.
+    /// Gets the HMRC accounts office reference for this RTI document.
     /// </summary>
     string? AccountsOfficeReference { get; init; }
 }

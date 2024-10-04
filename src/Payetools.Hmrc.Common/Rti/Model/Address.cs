@@ -21,10 +21,10 @@ public class Address
     /// <summary>Gets the second line of the address.</summary>
     public string AddressLine2 { get; init; } = default!;
 
-    /// <summary>Gets the third line of the address.</summary>
+    /// <summary>Gets the third line of the address. Optional.</summary>
     public string? AddressLine3 { get; init; }
 
-    /// <summary>Gets the fourth line of the address.</summary>
+    /// <summary>Gets the fourth line of the address. Optional.</summary>
     public string? AddressLine4 { get; init; }
 
     /// <summary>Gets the postcode (UK addresses only).</summary>
