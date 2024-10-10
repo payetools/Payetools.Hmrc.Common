@@ -15,11 +15,11 @@ public interface IRtiCredentials
     /// Gets the sender identifier for this set of credentials.  This is typically the
     /// Government Gateway ID being used for RTI submissions.
     /// </summary>
-    string Password { get; init; }
+    string SenderId { get; init; }
 
     /// <summary>
     /// Gets the password.  This is typically the Government Gateway password being
     /// used for RTI submissions.
     /// </summary>
-    string SenderId { get; init; }
+    string Password { get; init; }
 }
