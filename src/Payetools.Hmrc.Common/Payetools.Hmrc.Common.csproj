@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net6.0;net7.0;net8.0</TargetFrameworks>
+    <TargetFrameworks>net6.0;net8.0</TargetFrameworks>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
@@ -40,14 +40,17 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Payetools.Common" Version="1.0.145" />
-    <PackageReference Include="Payetools.NationalInsurance" Version="1.0.144" />
-    <PackageReference Include="Payetools.Payroll" Version="1.0.144" />
+    <PackageReference Include="Payetools.Common" Version="1.0.147" />
+    <PackageReference Include="Payetools.NationalInsurance" Version="1.0.147" />
+    <PackageReference Include="Payetools.Payroll" Version="1.0.147" />
     <PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="System.Text.Json" Version="8.0.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Update="MinVer" Version="6.0.0" />
   </ItemGroup>
 
 </Project>
