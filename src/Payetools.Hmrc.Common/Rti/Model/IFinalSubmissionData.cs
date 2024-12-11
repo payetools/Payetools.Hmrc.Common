@@ -7,7 +7,7 @@
 namespace Payetools.Hmrc.Common.Rti.Model;
 
 /// <summary>
-/// Enumeration that indicates what type of final FPS is being submitted, where appropriate.
+/// Enumeration that indicates what type of final FPS or EPS is being submitted, where appropriate.
 /// </summary>
 public enum FinalSubmissionType
 {
@@ -17,9 +17,9 @@ public enum FinalSubmissionType
     SchemeCeasing,
 
     /// <summary>
-    /// Final FPS for the tax year, typically submitted in March or April.
+    /// Final FPS or EPS for the tax year, typically submitted in March or April.
     /// </summary>
-    FinalFpsForTaxYear
+    FinalSubmissionForTaxYear
 }
 
 /// <summary>
