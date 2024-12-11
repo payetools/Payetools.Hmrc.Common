@@ -9,6 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_build", "build\_build.cspr
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{2C18428C-FD0A-4FD4-937E-F8D9DB52F6CC}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "doc", "doc", "{EB7AF66F-603C-4962-A102-D56FCFBA9CE1}"
+	ProjectSection(SolutionItems) = preProject
+		doc\releases.md = doc\releases.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,4 +37,3 @@ Global
 		SolutionGuid = {EB9D9026-CD6F-4415-B598-5F581DC5A490}
 	EndGlobalSection
 EndGlobal
-
