@@ -11,6 +11,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{2C18428C-FD0
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "doc", "doc", "{EB7AF66F-603C-4962-A102-D56FCFBA9CE1}"
 	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
 		doc\releases.md = doc\releases.md
 	EndProjectSection
 EndProject
