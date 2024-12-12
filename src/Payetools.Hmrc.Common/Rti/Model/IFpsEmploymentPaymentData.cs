@@ -39,6 +39,8 @@ public interface IFpsEmploymentPaymentData
     public interface IFlexibleDrawdown
     {
         // TODO: Complete the IFlexibleDrawdown interface.
+        // NB April 2025 onwards adds Stand alone lump sum indicator and
+        // Pension commencement excess lump sum indicator
     }
 
     // Note: BacsHashCode omitted as it is no longer used from 2023-2024; a pattern of

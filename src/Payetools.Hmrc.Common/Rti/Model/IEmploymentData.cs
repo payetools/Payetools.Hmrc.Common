@@ -45,6 +45,13 @@ public interface IEmploymentData
     IEmploymentNewStarterInfo? NewStarterInfo { get; set; }
 
     /// <summary>
+    /// Gets or sets the employee's workplace postcode, applicable when the employees' National Insurance
+    /// category indicates they are working in a Freeport or Investment Zone.
+    /// </summary>
+    /// <remarks>Only applicable from April 2025.</remarks>
+    string? EmployeeWorkplacePostcode { get; set; }
+
+    /// <summary>
     /// Gets or sets the payroll ID for the employee.  Includes information about any recent change.
     /// </summary>
     string PayrollId { get; set; }
