@@ -189,6 +189,12 @@ public class FpsEmploymentPaymentData : IFpsEmploymentPaymentData
     /// </summary>
     public decimal? SPBPPaidYtd { get; set; }
 
+    /// <summary>
+    /// Gets or sets the value of Statutory Neonatal Care pay (SNCP) year to date, if any.
+    /// </summary>
+    /// <remarks>Only applicable from April 2025.</remarks>
+    public decimal? SNCPPaidYtd { get; set; }
+
     // TODO: Implement Benefits (for car benefits)
     // TODO: Implement TrivialCommutationPayments
     // TODO: Implement FlexibleDrawdown

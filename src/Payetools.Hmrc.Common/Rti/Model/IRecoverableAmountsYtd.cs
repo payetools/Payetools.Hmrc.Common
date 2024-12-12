@@ -43,6 +43,12 @@ public interface IRecoverableAmountsYtd
     decimal SPBPRecovered { get; }
 
     /// <summary>
+    /// Gets the Statutory Neonatal Care Pay amount recovered, if appropriate. Zero otherwise.
+    /// </summary>
+    /// <remarks>Only applicable from April 2025.</remarks>
+    decimal SNCPRecovered { get; }
+
+    /// <summary>
     /// Gets the value of any compensation the employer is entitled to claim in addition to the SMP
     /// recovered year to date.
     /// </summary>
@@ -71,6 +77,13 @@ public interface IRecoverableAmountsYtd
     /// recovered year to date.
     /// </summary>
     decimal NICCompensationOnSPBP { get; }
+
+    /// <summary>
+    /// Gets the value of any compensation the employer is entitled to claim in addition to the SNCP
+    /// recovered year to date.
+    /// </summary>
+    /// <remarks>Only applicable from April 2025.</remarks>
+    decimal NICCompensationOnSNCP { get; }
 
     /// <summary>
     /// Gets the the full amount of CIS deductions taken from the company's payments in the year to date.

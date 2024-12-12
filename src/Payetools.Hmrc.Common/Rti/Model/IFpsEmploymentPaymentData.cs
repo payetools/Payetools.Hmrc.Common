@@ -217,6 +217,12 @@ public interface IFpsEmploymentPaymentData
     decimal? SPBPPaidYtd { get; set; }
 
     /// <summary>
+    /// Gets or sets the value of Statutory Neonatal Care pay (SNCP) year to date, if any.
+    /// </summary>
+    /// <remarks>Only applicable from April 2025.</remarks>
+    decimal? SNCPPaidYtd { get; set; }
+
+    /// <summary>
     /// Gets or sets the optional BACS hash code to be included this section of the FPS.
     /// </summary>
     /// <param name="taxYearEnding">Tax year that this FPS pertains to.</param>
