@@ -1,5 +1,15 @@
 # Releases
 
+# 1.1.6
+
+Full changelog: [1.1.5 -> 1.1.6](https://github.com/payetools/Payetools.Hmrc.Common/compare/1.1.5...1.1.6)
+
+## What's Changed
+
+### Updates
+
+- Feature: added Employee Workplace Postcode field to FPS (Applicable from April 2025)
+
 # 1.1.5
 
 Full changelog: [1.1.4 -> 1.1.5](https://github.com/payetools/Payetools.Hmrc.Common/compare/1.1.4...1.1.5)
