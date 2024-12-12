@@ -1,5 +1,15 @@
 # Releases
 
+# 1.1.8
+
+Full changelog: [1.1.6 -> 1.1.8](https://github.com/payetools/Payetools.Hmrc.Common/compare/1.1.6...1.1.8)
+
+## What's Changed
+
+### Updates
+
+- Chore: updated dependencies on Payetools.* packages to 1.1.8
+
 # 1.1.6
 
 Full changelog: [1.1.5 -> 1.1.6](https://github.com/payetools/Payetools.Hmrc.Common/compare/1.1.5...1.1.6)
