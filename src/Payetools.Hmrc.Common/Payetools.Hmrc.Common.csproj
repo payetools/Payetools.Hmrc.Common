@@ -40,7 +40,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Payetools.Common" Version="1.1.10" />
+    <PackageReference Include="Payetools.Common" Version="1.1.11" />
     <PackageReference Include="Payetools.NationalInsurance" Version="1.1.10" />
     <PackageReference Include="Payetools.Payroll" Version="1.1.10" />
     <PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
