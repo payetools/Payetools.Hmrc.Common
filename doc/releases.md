@@ -1,5 +1,15 @@
 # Releases
 
+# 1.1.19
+
+Full changelog: [1.1.14 -> 1.1.19](https://github.com/payetools/Payetools.Hmrc.Common/compare/1.1.14...1.1.19)
+
+## What's Changed
+
+### Updates
+
+- Feat: added IEmployeePayRunResultSummary interface to provide mechanism for identifying minimal set of data required for HMRC submissions
+
 # 1.1.14
 
 Full changelog: [1.1.13 -> 1.1.14](https://github.com/payetools/Payetools.Hmrc.Common/compare/1.1.13...1.1.14)
