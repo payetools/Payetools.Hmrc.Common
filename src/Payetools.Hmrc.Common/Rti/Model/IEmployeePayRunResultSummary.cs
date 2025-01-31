@@ -19,13 +19,18 @@ public interface IEmployeePayRunResultSummary
     /// Gets the employee's pension contribution made outside of Net Pay Arrangment (NPA)
     /// in the pay period.
     /// </summary>
-    public decimal EmployeePensionContributionsOutsideNpa { get; }
+    public decimal? EmployeePensionContributionsOutsideNpa { get; }
 
     /// <summary>
     /// Gets the employee's pension contribution made within a Net Pay Arrangment (NPA)
     /// in the pay period.
     /// </summary>
-    public decimal EmployeeContributionsUnderNpa { get; }
+    public decimal? EmployeePensionContributionsUnderNpa { get; }
+
+    /// <summary>
+    /// Gets the employer's pension contribution in the pay period.
+    /// </summary>
+    public decimal? EmployePensionContributions { get; }
 
     /// <summary>
     /// Gets any attachment of earnings deductions made in the pay period.
