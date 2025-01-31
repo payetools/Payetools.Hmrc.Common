@@ -1,5 +1,16 @@
 # Releases
 
+# 1.1.14
+
+Full changelog: [1.1.13 -> 1.1.14](https://github.com/payetools/Payetools.Hmrc.Common/compare/1.1.13...1.1.14)
+
+## What's Changed
+
+### Updates
+
+- Chore: updated dependencies on Payetools.* packages to 1.1.14
+- Chore: updated dependency (nuke.common)
+
 # 1.1.13
 
 Full changelog: [1.1.10 -> 1.1.13](https://github.com/payetools/Payetools.Hmrc.Common/compare/1.1.10...1.1.13)
