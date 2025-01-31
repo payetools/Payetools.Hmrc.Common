@@ -13,4 +13,39 @@ namespace Payetools.Hmrc.Common.Rti.Model;
 /// </summary>
 public interface IEmployeePayRunResultSummary
 {
+    /// <summary>
+    /// Gets the employee's pension contribution made outside of Net Pay Arrangment (NPA)
+    /// in the pay period.
+    /// </summary>
+    public decimal EmployeePensionContributionsOutsideNpa { get; }
+
+    /// <summary>
+    /// Gets any attachment of earnings deductions made in the pay period.
+    /// </summary>
+    public decimal AttachmentOfEarningsTotalDeduction { get; }
+
+    /// <summary>
+    /// Gets the employee's total gross pay in the pay period.
+    /// </summary>
+    public decimal TotalGrossPay { get; }
+
+    /// <summary>
+    /// Gets any payrolled benefits in the pay period.
+    /// </summary>
+    public decimal PayrollBenefitsInPeriod { get; }
+
+    /// <summary>
+    /// Gets the employee's final tax due in the pay period.
+    /// </summary>
+    public decimal FinalTaxDue { get; }
+
+    /// <summary>
+    /// Gets the employee's final NI contribution due in the pay period.
+    /// </summary>
+    public decimal EmployeeNiContribution { get; }
+
+    /// <summary>
+    /// Gets any student loan (including postgrad loans) deductions made in the pay period.
+    /// </summary>
+    public decimal StudentLoanTotalDeduction { get; }
 }
