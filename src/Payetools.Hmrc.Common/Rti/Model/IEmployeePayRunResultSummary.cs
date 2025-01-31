@@ -4,6 +4,8 @@
 //
 //   * The MIT License, see https://opensource.org/license/mit/
 
+using Payetools.Common.Model;
+
 namespace Payetools.Hmrc.Common.Rti.Model;
 
 /// <summary>
@@ -20,6 +22,12 @@ public interface IEmployeePayRunResultSummary
     public decimal EmployeePensionContributionsOutsideNpa { get; }
 
     /// <summary>
+    /// Gets the employee's pension contribution made within a Net Pay Arrangment (NPA)
+    /// in the pay period.
+    /// </summary>
+    public decimal EmployeeContributionsUnderNpa { get; }
+
+    /// <summary>
     /// Gets any attachment of earnings deductions made in the pay period.
     /// </summary>
     public decimal AttachmentOfEarningsTotalDeduction { get; }
@@ -30,9 +38,9 @@ public interface IEmployeePayRunResultSummary
     public decimal TotalGrossPay { get; }
 
     /// <summary>
-    /// Gets any payrolled benefits in the pay period.
+    /// Gets the employee's taxable pay in the pay period.
     /// </summary>
-    public decimal PayrollBenefitsInPeriod { get; }
+    public decimal TaxablePay { get; }
 
     /// <summary>
     /// Gets the employee's final tax due in the pay period.
@@ -40,12 +48,47 @@ public interface IEmployeePayRunResultSummary
     public decimal FinalTaxDue { get; }
 
     /// <summary>
-    /// Gets the employee's final NI contribution due in the pay period.
+    /// Gets any payrolled benefits in the pay period.
+    /// </summary>
+    public decimal PayrollBenefitsInPeriod { get; }
+
+    /// <summary>
+    /// Gets the employee's NI category used for NI calculations in the pay period.
+    /// </summary>
+    public NiCategory NiCategory { get; }
+
+    /// <summary>
+    /// Gets the employee's NIC-able pay in the pay period.
+    /// </summary>
+    public decimal NicablePay { get; }
+
+    /// <summary>
+    /// Gets the employee NI contribution due in the pay period.
     /// </summary>
     public decimal EmployeeNiContribution { get; }
 
     /// <summary>
-    /// Gets any student loan (including postgrad loans) deductions made in the pay period.
+    /// Gets the employer NI contribution due in the pay period.
     /// </summary>
-    public decimal StudentLoanTotalDeduction { get; }
+    public decimal EmployerNiContribution { get; }
+
+    /// <summary>
+    /// Gets a value indicating whether the payment being made is after the employee has left.
+    /// </summary>
+    public bool IsPaymentAfterLeaving { get; }
+
+    /// <summary>
+    /// Gets the employee student loan type, if applicable.
+    /// </summary>
+    public StudentLoanType? StudentLoanType { get; }
+
+    /// <summary>
+    /// Gets any student loan deduction made in the pay period.
+    /// </summary>
+    public decimal? StudentLoanDeduction { get; }
+
+    /// <summary>
+    /// Gets any postgraduate loan deduction made in the pay period.
+    /// </summary>
+    public decimal? PostgraduateLoanDeduction { get; }
 }
