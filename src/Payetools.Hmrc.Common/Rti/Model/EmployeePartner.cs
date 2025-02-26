@@ -15,10 +15,12 @@ namespace Payetools.Hmrc.Common.Rti.Model;
 /// </summary>
 public class EmployeePartner
 {
+    private NiNumber _niNumber = default!;
+
     /// <summary>
     /// Gets the partner's National Insurance number.
     /// </summary>
-    public NiNumber NiNumber { get; init; }
+    public string NiNumber { get => _niNumber; init => _niNumber = value; }
 
     /// <summary>
     /// Gets the partner's name details.

@@ -2,6 +2,16 @@
 
 # 1.1.20
 
+Full changelog: [1.1.20 -> 1.1.21](https://github.com/payetools/Payetools.Hmrc.Common/compare/1.1.20...1.1.21)
+
+## What's Changed
+
+### Updates
+
+- Fix: updated EmployeePartner NiNumber property to string to allow deserialization
+
+# 1.1.20
+
 Full changelog: [1.1.19 -> 1.1.20](https://github.com/payetools/Payetools.Hmrc.Common/compare/1.1.19...1.1.20)
 
 ## What's Changed
