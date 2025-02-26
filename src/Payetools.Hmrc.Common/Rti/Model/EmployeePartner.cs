@@ -1,10 +1,12 @@
 ﻿// Copyright (c) 2023-2025, Payetools Foundation.
 //
-// This source code is the intellectual property of Payetools Foundation
-// and for information security purposes is classified as CONFIDENTIAL.
+// Payetools Foundation licenses this file to you under the following license(s):
+//
+//   * The MIT License, see https://opensource.org/license/mit/
 
 using Payetools.Common.Model;
 using Payetools.Payroll.Model;
+using System.Text.Json.Serialization;
 
 namespace Payetools.Hmrc.Common.Rti.Model;
 
@@ -22,6 +24,19 @@ public class EmployeePartner
     /// Gets the partner's name details.
     /// </summary>
     public ContactName Name { get; init; }
+
+    /// <summary>
+    /// Initializes a new instance of the <see cref="EmployeePartner"/> class. Primarily intended
+    /// for serialisation purposes.
+    /// </summary>
+    /// <param name="niNumber">National insurance number.</param>
+    /// <param name="name">Name structure containing the partner's name information.</param>
+    [JsonConstructor]
+    public EmployeePartner(string niNumber, ContactName name)
+    {
+        NiNumber = niNumber;
+        Name = name;
+    }
 
     /// <summary>
     /// Initializes a new instance of the <see cref="EmployeePartner"/> type.
@@ -57,7 +72,7 @@ public class EmployeePartner
     private static string[] GetForenames(INamedPerson nameInfo)
     {
         if (nameInfo.FirstName == null)
-            return Array.Empty<string>();
+            return [];
 
         if (!nameInfo.HasMiddleName)
             return new[] { nameInfo.FirstName };
