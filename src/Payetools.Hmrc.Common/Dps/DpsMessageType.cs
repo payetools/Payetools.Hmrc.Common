@@ -1,7 +1,8 @@
 ﻿// Copyright (c) 2023-2025, Payetools Foundation.
 //
-// This source code is the intellectual property of Payetools Foundation
-// and for information security purposes is classified as CONFIDENTIAL.
+// Payetools Foundation licenses this file to you under the following license(s):
+//
+//   * The MIT License, see https://opensource.org/license/mit/
 
 namespace Payetools.Hmrc.Common.Dps;
 

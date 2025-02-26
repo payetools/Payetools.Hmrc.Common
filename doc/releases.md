@@ -1,5 +1,16 @@
 # Releases
 
+# 1.1.20
+
+Full changelog: [1.1.19 -> 1.1.20](https://github.com/payetools/Payetools.Hmrc.Common/compare/1.1.19...1.1.20)
+
+## What's Changed
+
+### Updates
+
+- Doc: updated outdated file header comments to match standard format 
+- Feat: added constructor to EmployeePartner to support deserialization
+
 # 1.1.19
 
 Full changelog: [1.1.14 -> 1.1.19](https://github.com/payetools/Payetools.Hmrc.Common/compare/1.1.14...1.1.19)
