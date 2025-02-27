@@ -1,6 +1,16 @@
 # Releases
 
-# 1.1.20
+# 1.1.22
+
+Full changelog: [1.1.21 -> 1.1.22](https://github.com/payetools/Payetools.Hmrc.Common/compare/1.1.21...1.1.22)
+
+## What's Changed
+
+### Updates
+
+- Fix: updated interface hierarchy to address serialisation issues with IFullPaymentSubmissionData
+
+# 1.1.21
 
 Full changelog: [1.1.20 -> 1.1.21](https://github.com/payetools/Payetools.Hmrc.Common/compare/1.1.20...1.1.21)
 
