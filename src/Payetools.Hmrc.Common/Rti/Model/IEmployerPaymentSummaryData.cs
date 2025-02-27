@@ -14,7 +14,7 @@ namespace Payetools.Hmrc.Common.Rti.Model;
 /// <summary>
 /// Interface that provides access to all the data needed to construct an <em>Employer Payment Summary.</em>.
 /// </summary>
-public interface IEmployerPaymentSummaryData : IRtiDocumentDataSource
+public interface IEmployerPaymentSummaryData : IIRenvelopeData
 {
     /// <summary>
     /// Gets the Corporation Tax reference for the employer. May be null.
