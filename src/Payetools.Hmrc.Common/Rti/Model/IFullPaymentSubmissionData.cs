@@ -9,7 +9,7 @@ namespace Payetools.Hmrc.Common.Rti.Model;
 /// <summary>
 /// Interface that provides access to all the data needed to construct an <em>Full Payment Submission.</em>.
 /// </summary>
-public interface IFullPaymentSubmissionData : IRtiDocumentDataSource
+public interface IFullPaymentSubmissionData : IRtiDocumentDataSource, IIRenvelopeData
 {
     /// <summary>
     /// Gets the Corporation Tax reference for the employer. May be null.

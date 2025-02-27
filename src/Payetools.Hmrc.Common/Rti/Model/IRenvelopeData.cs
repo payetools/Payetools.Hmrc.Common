@@ -9,7 +9,7 @@ namespace Payetools.Hmrc.Common.Rti.Model;
 /// <summary>
 /// Represents the data set needed to populate the header elements of the IRenvelope.
 /// </summary>
-public class IRenvelopeData : IRtiDocumentDataSource
+public class IRenvelopeData : IRtiDocumentDataSource, IIRenvelopeData
 {
     /// <summary>
     /// Gets the period end date for the data within the contained FPS/EPS/NVR message.
