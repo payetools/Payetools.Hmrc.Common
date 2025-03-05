@@ -1,5 +1,15 @@
 # Releases
 
+# 1.1.24
+
+Full changelog: [1.1.23 -> 1.1.24](https://github.com/payetools/Payetools.Hmrc.Common/compare/1.1.23...1.1.24)
+
+## What's Changed
+
+### Updates
+
+- Chore: updated dependencies on Payetools.* packages to 1.1.17
+
 # 1.1.23
 
 Full changelog: [1.1.21 -> 1.1.23](https://github.com/payetools/Payetools.Hmrc.Common/compare/1.1.21...1.1.23)
