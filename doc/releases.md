@@ -1,8 +1,8 @@
 # Releases
 
-# 1.1.26
+# 1.1.28
 
-Full changelog: [1.1.26 -> 1.1.27](https://github.com/payetools/Payetools.Hmrc.Common/compare/1.1.26...1.1.27)
+Full changelog: [1.1.26 -> 1.1.28](https://github.com/payetools/Payetools.Hmrc.Common/compare/1.1.26...1.1.28)
 
 ## What's Changed
 

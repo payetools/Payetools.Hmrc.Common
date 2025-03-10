@@ -122,7 +122,7 @@ public class ContactName
             sb.Append(Title).Append(' ');
 
         if (Forenames != null && Forenames.Length > 0)
-            sb.Append(string.Join(' ', Forenames));
+            sb.Append(string.Join(' ', Forenames)).Append(' ');
 
         if (!string.IsNullOrWhiteSpace(Initials))
             sb.Append(Initials).Append(' ');
