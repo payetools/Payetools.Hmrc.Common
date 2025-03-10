@@ -1,5 +1,15 @@
 # Releases
 
+# 1.1.26
+
+Full changelog: [1.1.26 -> 1.1.27](https://github.com/payetools/Payetools.Hmrc.Common/compare/1.1.26...1.1.27)
+
+## What's Changed
+
+### Updates
+
+- Feat: added ToString override to ContactName entity
+
 # 1.1.25
 
 Full changelog: [1.1.23 -> 1.1.25](https://github.com/payetools/Payetools.Hmrc.Common/compare/1.1.23...1.1.25)

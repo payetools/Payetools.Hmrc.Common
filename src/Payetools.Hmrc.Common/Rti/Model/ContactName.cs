@@ -4,6 +4,8 @@
 //
 //   * The MIT License, see https://opensource.org/license/mit/
 
+using System.Text;
+
 namespace Payetools.Hmrc.Common.Rti.Model;
 
 /// <summary>
@@ -100,4 +102,33 @@ public class ContactName
     /// </summary>
     public static ContactName Empty =>
         new ContactName(string.Empty, string.Empty, string.Empty);
+
+    /// <summary>
+    /// Returns this contact name as a human-readable string.
+    /// </summary>
+    /// <returns>Contact name as human-readable string.</returns>
+    public override string ToString() => ToString(false);
+
+    /// <summary>
+    /// Returns this contact name as a human-readable string.
+    /// </summary>
+    /// <param name="includeTitle">Set to true to include the individual's title.</param>
+    /// <returns>Contact name as human-readable string.</returns>
+    public string ToString(bool includeTitle)
+    {
+        var sb = new StringBuilder();
+
+        if (includeTitle && !string.IsNullOrWhiteSpace(Title))
+            sb.Append(Title).Append(' ');
+
+        if (Forenames != null && Forenames.Length > 0)
+            sb.Append(string.Join(' ', Forenames));
+
+        if (!string.IsNullOrWhiteSpace(Initials))
+            sb.Append(Initials).Append(' ');
+
+        sb.Append(Surname);
+
+        return sb.ToString();
+    }
 }
