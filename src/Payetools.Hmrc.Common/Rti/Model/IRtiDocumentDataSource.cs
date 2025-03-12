@@ -17,7 +17,7 @@ public interface IRtiDocumentDataSource
     /// <summary>
     /// Gets the relevant period end date.
     /// </summary>
-    DateTime PeriodEnd { get; init; }
+    DateTimeOffset PeriodEnd { get; init; }
 
     /// <summary>
     /// Gets the optional contact details to be inserted into the IRheader.

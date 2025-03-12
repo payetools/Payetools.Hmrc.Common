@@ -4,8 +4,6 @@
 //
 //   * The MIT License, see https://opensource.org/license/mit/
 
-using Payetools.Common.Model;
-
 namespace Payetools.Hmrc.Common.Rti.Model;
 
 /// <summary>
@@ -31,12 +29,12 @@ public interface IEmployeeDetails
     /// <summary>
     /// Gets or sets the employee's date of birth.
     /// </summary>
-    DateTime DateOfBirth { get; set; }
+    DateTimeOffset DateOfBirth { get; set; }
 
     /// <summary>
     /// Gets or sets the employee's gender.
     /// </summary>
-    Gender Gender { get; set; }
+    string Gender { get; set; }
 
     /// <summary>
     /// Gets or sets the employee's passport number.  Optional.

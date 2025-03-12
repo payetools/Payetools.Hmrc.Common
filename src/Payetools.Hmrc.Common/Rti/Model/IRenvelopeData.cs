@@ -14,7 +14,7 @@ public class IRenvelopeData : IIRenvelopeData
     /// <summary>
     /// Gets the period end date for the data within the contained FPS/EPS/NVR message.
     /// </summary>
-    public DateTime PeriodEnd { get; init; }
+    public DateTimeOffset PeriodEnd { get; init; }
 
     /// <summary>
     /// Gets optional header contact details.  If no header contact details are provided, then the
@@ -55,7 +55,7 @@ public class IRenvelopeData : IIRenvelopeData
     /// <param name="hmrcPayeReference">HMRC PAYE reference.  May be null.</param>
     /// <param name="accountsOfficeReference">HMRC accounts office reference.  May be null.</param>
     public IRenvelopeData(
-        in DateTime periodEnd,
+        in DateTimeOffset periodEnd,
         in IRheaderContact iRheaderContact,
         in IRheaderSenderType sender,
         in string? hmrcPayeReference,

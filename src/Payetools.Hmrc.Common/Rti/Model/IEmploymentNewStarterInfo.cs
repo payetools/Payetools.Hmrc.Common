@@ -16,7 +16,7 @@ public interface IEmploymentNewStarterInfo
     /// <summary>
     /// Gets the start date for the employee.
     /// </summary>
-    DateTime StartDate { get; init; }
+    DateTimeOffset StartDate { get; init; }
 
     /// <summary>
     /// Gets the starter declaration, A, B or C.

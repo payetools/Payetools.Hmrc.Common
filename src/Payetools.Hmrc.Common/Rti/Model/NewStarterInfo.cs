@@ -16,7 +16,7 @@ public class NewStarterInfo : IEmploymentNewStarterInfo
     /// <summary>
     /// Gets the start date for the employee.
     /// </summary>
-    public DateTime StartDate { get; init; }
+    public DateTimeOffset StartDate { get; init; }
 
     /// <summary>
     /// Gets the starter declaration, A, B or C.

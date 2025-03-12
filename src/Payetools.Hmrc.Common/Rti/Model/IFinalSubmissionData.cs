@@ -36,5 +36,5 @@ public interface IFinalSubmissionData
     /// <summary>
     /// Gets the date of the scheme ceased, where appropriate.
     /// </summary>
-    DateTime? DateSchemeCeased { get; }
+    DateTimeOffset? DateSchemeCeased { get; }
 }

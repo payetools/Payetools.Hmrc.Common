@@ -20,5 +20,5 @@ public class FinalSubmissionData : IFinalSubmissionData
     /// <summary>
     /// Gets the date of the scheme ceased, where appropriate.
     /// </summary>
-    public DateTime? DateSchemeCeased { get; init; }
+    public DateTimeOffset? DateSchemeCeased { get; init; }
 }

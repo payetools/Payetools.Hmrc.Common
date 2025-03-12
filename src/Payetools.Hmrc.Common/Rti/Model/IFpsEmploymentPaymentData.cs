@@ -54,7 +54,7 @@ public interface IFpsEmploymentPaymentData
     /// <summary>
     /// Gets or sets the date of this payment, typically the pay date.
     /// </summary>
-    DateTime PaymentDate { get; set; }
+    DateTimeOffset PaymentDate { get; set; }
 
     /// <summary>
     /// Gets or sets or sets the reason code for any late submissions.

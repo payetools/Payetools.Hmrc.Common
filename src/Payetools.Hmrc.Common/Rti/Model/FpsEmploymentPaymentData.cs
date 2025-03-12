@@ -21,7 +21,7 @@ public class FpsEmploymentPaymentData : IFpsEmploymentPaymentData
     /// <summary>
     /// Gets or sets the date of this payment, typically the pay date.
     /// </summary>
-    public DateTime PaymentDate { get; set; }
+    public DateTimeOffset PaymentDate { get; set; }
 
     /// <summary>
     /// Gets or sets or sets the reason code for any late submissions, if applicable.

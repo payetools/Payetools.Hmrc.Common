@@ -85,7 +85,7 @@ public class EmploymentData : IEmploymentData
     /// Gets or sets the employee's leaving date, if appropriate.  Null if the employee's employment is
     /// continuing.
     /// </summary>
-    public DateTime? LeavingDate { get; set; }
+    public DateTimeOffset? LeavingDate { get; set; }
 
     /// <summary>
     /// Gets the employee year to date data needed to populate the <em>Employment</em> element of
