@@ -9,6 +9,10 @@ namespace Payetools.Hmrc.Common.Rti.Model;
 /// <summary>
 /// Represents the year-to-date data for an employment entry in the FPS.
 /// </summary>
+/// <remarks>Note that this interface supports the omission of most of the YTD
+/// fields (as in, they are nullable); the core Payetools libraries do not
+/// support this capability but always provides a zero value even if no value has
+/// been set.</remarks>
 public class FpsEmploymentYtdData : IFpsEmploymentYtdData
 {
     /// <summary>

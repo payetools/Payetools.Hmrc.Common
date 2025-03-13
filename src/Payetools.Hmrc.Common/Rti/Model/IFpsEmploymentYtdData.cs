@@ -10,6 +10,10 @@ namespace Payetools.Hmrc.Common.Rti.Model;
 /// Interface that provides access to the employee year to date data needed to populate the
 /// <em>Employment</em> element of the Full Payment Submission message.
 /// </summary>
+/// <remarks>Note that this interface supports the omission of most of the YTD
+/// fields (as in, they are nullable); the core Payetools libraries do not
+/// support this capability but always provides a zero value even if no value has
+/// been set.</remarks>
 public interface IFpsEmploymentYtdData
 {
     /// <summary>
