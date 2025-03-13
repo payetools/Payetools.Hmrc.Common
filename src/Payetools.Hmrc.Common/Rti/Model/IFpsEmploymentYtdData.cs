@@ -25,27 +25,27 @@ public interface IFpsEmploymentYtdData
     /// <summary>
     /// Gets the total amount of student loan deductions so far this tax year.
     /// </summary>
-    decimal StudentLoansYtd { get; init; }
+    decimal? StudentLoansYtd { get; init; }
 
     /// <summary>
     /// Gets the total amount of postgraduate loan deductions so far this tax year.
     /// </summary>
-    decimal PostgradLoansYtd { get; init; }
+    decimal? PostgradLoansYtd { get; init; }
 
     /// <summary>
     /// Gets the total amount of payrolled benefits so far this tax year.
     /// </summary>
-    decimal PayrolledBenefitsYtd { get; init; }
+    decimal? PayrolledBenefitsYtd { get; init; }
 
     /// <summary>
     /// Gets the total amount of employee pension contributions paid under Net Pay Arrangements
     /// so far this tax year.
     /// </summary>
-    decimal EmployeePensionContributionsYtd { get; init; }
+    decimal? EmployeePensionContributionsYtd { get; init; }
 
     /// <summary>
     /// Gets the total amount of employee pension contributions paid outside of Net Pay Arrangements
     /// so far this tax year.
     /// </summary>
-    decimal EmployeePensionContributionsNotPaidYtd { get; init; }
+    decimal? EmployeePensionContributionsNotPaidYtd { get; init; }
 }
