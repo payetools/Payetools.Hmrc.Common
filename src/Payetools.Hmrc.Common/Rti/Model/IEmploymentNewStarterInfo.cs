@@ -21,7 +21,7 @@ public interface IEmploymentNewStarterInfo
     /// <summary>
     /// Gets the starter declaration, A, B or C.
     /// </summary>
-    StarterDeclaration Declaration { get; init; }
+    StarterDeclaration? Declaration { get; init; }
 
     /// <summary>
     /// Gets a value indicating whether student loans should continue in the new employment.
